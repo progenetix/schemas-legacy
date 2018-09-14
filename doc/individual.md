@@ -5,7 +5,7 @@ An individual is a single organism (here typically a human).
 
 ## Individual
 
-### Properties of the _ class
+<h3>Properties of the <i>Individual</i> class</h3>
 
 <table>
 <tr>
@@ -74,17 +74,17 @@ list of biocharacteristic_class objects with properly prefixed term ids, describ
 'biocharacteristics' : [
   {
     'class' : {
-                 'label' : 'female genetic sex',
-                 'id' : 'PATO:0020000'
+                 'id' : 'PATO:0020000',
+                 'label' : 'female genetic sex'
                },
     'description' : 'girl'
   },
   {
-    'description' : 'Jean-Luc Picard',
     'class' : {
                  'label' : 'Homo sapiens',
                  'id' : 'NCBITaxon:9606'
-               }
+               },
+    'description' : 'Jean-Luc Picard'
   },
   {
     'class' : {
@@ -131,12 +131,12 @@ This value may reflect either the place of burth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'city' : 'Timisoara',
-  'country' : 'Romania',
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
   'altitude' : 94,
-  'latitude' : 45.75,
+  'country' : 'Romania',
   'longitude' : 21.23,
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'latitude' : 45.75,
+  'city' : 'Timisoara'
 }
 ```
 ### id
@@ -156,14 +156,14 @@ additional variant information, as defined in the example and accompanying docum
 
 ```
 'info' : {
-  'first_name' : {
-                    'value' : 'Ion',
-                    'type' : 'string'
-                  },
   'last_name' : {
-                   'value' : 'Tichy',
-                   'type' : 'string'
-                 }
+                   'type' : 'string',
+                   'value' : 'Tichy'
+                 },
+  'first_name' : {
+                    'type' : 'string',
+                    'value' : 'Ion'
+                  }
 }
 ```
 ### updated

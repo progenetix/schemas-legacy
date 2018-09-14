@@ -5,7 +5,7 @@ The document describes attributes of the "variant" object, which e.g. can be ins
 
 ## Variant
 
-### Properties of the _ class
+<h3>Properties of the <i>Variant</i> class</h3>
 
 <table>
 <tr>
@@ -187,8 +187,8 @@ additional variant information, as defined in the example and accompanying docum
 ```
 'info' : {
   'cnv_value' : {
-                   'value' : '-0.294',
                    'format' : 'float',
+                   'value' : '-0.294',
                    'type' : 'number'
                  },
   'cnv_length' : {

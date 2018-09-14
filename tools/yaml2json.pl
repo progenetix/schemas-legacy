@@ -66,7 +66,7 @@ END
       my $class_md  =  <<END;
 ## $class
 
-### Properties of the _$class_ class
+<h3>Properties of the <i>$class</i> class</h3>
 
 <table>
 <tr>

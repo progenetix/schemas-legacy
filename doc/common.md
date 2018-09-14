@@ -5,7 +5,7 @@ Definition of some prototype objects which are re-used in other schema documents
 
 ## Biocharacteristic_class
 
-### Properties of the _ class
+<h3>Properties of the <i>Biocharacteristic_class</i> class</h3>
 
 <table>
 <tr>
@@ -71,7 +71,7 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
 ```
 ## Geo_class
 
-### Properties of the _ class
+<h3>Properties of the <i>Geo_class</i> class</h3>
 
 <table>
 <tr>
@@ -188,7 +188,7 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
 ```
 ## Info_class
 
-### Properties of the _ class
+<h3>Properties of the <i>Info_class</i> class</h3>
 
 <table>
 <tr>
@@ -267,7 +267,7 @@ the value in a format correstponding to type
 ```
 ## Ontology_class
 
-### Properties of the _ class
+<h3>Properties of the <i>Ontology_class</i> class</h3>
 
 <table>
 <tr>
@@ -314,7 +314,7 @@ the text label associated with the term
 ```
 ## Reference_class
 
-### Properties of the _ class
+<h3>Properties of the <i>Reference_class</i> class</h3>
 
 <table>
 <tr>

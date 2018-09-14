@@ -4,7 +4,7 @@ The callset object contains information about an experiment performed on materia
 
 ## Callset
 
-### Properties of the _ class
+<h3>Properties of the <i>Callset</i> class</h3>
 
 <table>
 <tr>
@@ -87,11 +87,11 @@ This geo_class attribute ideally describes the geographic location of where this
 
 ```
 'geo_provenance' : {
-  'longitude' : 21.23,
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'latitude' : 45.75,
+  'longitude' : 21.23,
   'country' : 'Romania',
-  'city' : 'Timisoara',
-  'latitude' : 45.75
+  'city' : 'Timisoara'
 }
 ```
 ### id
@@ -113,16 +113,7 @@ additional variant information, as defined in the example and accompanying docum
 'info' : {
   'cnv_maps' : {
                   'value' : {
-                               'binning' : {
-                                              'format' : 'int64',
-                                              'value' : 1000000,
-                                              'type' : 'number',
-                                              'description' : 'interval size in bases for the binning, when creating the cnv_maps'
-                                            },
                                'dup_map' : {
-                                              'type' : 'array',
-                                              'description' : 'gain cnv status for the corresponding genome intervals
-',
                                               'value' : [
                                                            '',
                                                            '',
@@ -135,7 +126,16 @@ additional variant information, as defined in the example and accompanying docum
                                                            '',
                                                            '',
                                                            ''
-                                                         ]
+                                                         ],
+                                              'description' : 'gain cnv status for the corresponding genome intervals
+',
+                                              'type' : 'array'
+                                            },
+                               'binning' : {
+                                              'type' : 'number',
+                                              'description' : 'interval size in bases for the binning, when creating the cnv_maps',
+                                              'value' : 1000000,
+                                              'format' : 'int64'
                                             }
                              },
                   'description' : 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.

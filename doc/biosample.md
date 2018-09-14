@@ -4,7 +4,7 @@ In this schema, a "biosample" as the source of the material of a molecular analy
 
 ## Biosample
 
-### Properties of the _ class
+<h3>Properties of the <i>Biosample</i> class</h3>
 
 <table>
 <tr>
@@ -126,24 +126,24 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 'biocharacteristics' : [
   {
     'class' : {
-                 'label' : 'Pancreas, NOS',
-                 'id' : 'pgx:icdot:c25.9'
-               },
-    'description' : 'Pancreatic Adenocarcinoma'
-  },
-  {
-    'class' : {
-                 'id' : 'pgx:icdom:81403',
-                 'label' : 'Adenocarcinoma, NOS'
+                 'id' : 'pgx:icdot:c25.9',
+                 'label' : 'Pancreas, NOS'
                },
     'description' : 'Pancreatic Adenocarcinoma'
   },
   {
     'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
+                 'label' : 'Adenocarcinoma, NOS',
+                 'id' : 'pgx:icdom:81403'
+               }
+  },
+  {
+    'class' : {
                  'label' : 'Pancreatic Adenocarcinoma',
                  'id' : 'ncit:c8294'
-               }
+               },
+    'description' : 'Pancreatic Adenocarcinoma'
   }
 ]
 ```
@@ -188,16 +188,16 @@ list of reference_class objects with properly (e.g. identifiers.org) prefixed ex
     'relation' : 'provenance'
   },
   {
-    'id' : 'pubmed:17440070',
-    'relation' : 'report'
+    'relation' : 'report',
+    'id' : 'pubmed:17440070'
   },
   {
     'relation' : 'technology',
     'id' : 'geo:GPL4894'
   },
   {
-    'id' : 'geo:GSM185088',
-    'relation' : 'denotes'
+    'relation' : 'denotes',
+    'id' : 'geo:GSM185088'
   }
 ]
 ```
@@ -220,12 +220,12 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
+  'altitude' : 94,
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'longitude' : 21.23,
-  'latitude' : 45.75,
   'city' : 'Timisoara',
   'country' : 'Romania',
-  'altitude' : 94
+  'longitude' : 21.23,
+  'latitude' : 45.75
 }
 ```
 ### id
@@ -256,14 +256,14 @@ This is a wrapper for objects without further specification in the schema.
 
 ```
 'info' : {
-  'followup_time' : {
-                       'value' : 'P14M',
-                       'type' : 'ISO8601 string'
-                     },
   'death' : {
                'type' : 'boolean',
                'value' : 1
-             }
+             },
+  'followup_time' : {
+                       'value' : 'P14M',
+                       'type' : 'ISO8601 string'
+                     }
 }
 ```
 
