@@ -83,6 +83,8 @@ END
       
         my $md_example  =   _reformat_example($attr{$class}->{properties}->{$property}->{example});
         $class_md   .=  <<END;
+### Properties of the _$class_ class
+
 <tr>
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
@@ -112,12 +114,17 @@ $query->{description}
 ```
 $query->{query}
 ```
+
+------
+
 END
 
       }}}
       
       $class_md .=  <<END;
 </table>
+
+### Extended notes and examples on the _$class_ properties
 
 END
       $markdown .=  $class_md;    

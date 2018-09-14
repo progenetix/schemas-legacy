@@ -12,18 +12,24 @@ Definition of some prototype objects which are re-used in other schema documents
   <th>Format</th>
   <th>Description</th>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>class</td>
   <td></td>
   <td></td>
   <td>an ontology_class object</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>description</td>
   <td>string</td>
   <td></td>
   <td>a free-text description of this biocharacteristic</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>negated</td>
   <td>boolean</td>
@@ -31,6 +37,8 @@ Definition of some prototype objects which are re-used in other schema documents
   <td>flag for negating this biocharacteristic_class object; a "false" is assumed as default and does not have to be stated</td>
 </tr>
 </table>
+
+### Extended notes and examples on the _ properties
 
 ### class
 
@@ -40,8 +48,8 @@ an ontology_class object
 
 ```
 'class' : {
-  'id' : 'ncit:c8294',
-  'label' : 'Pancreatic Adenocarcinoma'
+  'label' : 'Pancreatic Adenocarcinoma',
+  'id' : 'ncit:c8294'
 }
 ```
 ### description
@@ -71,24 +79,32 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <th>Format</th>
   <th>Description</th>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>altitude</td>
   <td>number</td>
   <td>float</td>
   <td>height in meters above the WGS 84 reference ellipsoid; otional</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>city</td>
   <td>string</td>
   <td></td>
   <td></td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>country</td>
   <td>string</td>
   <td></td>
   <td></td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>label</td>
   <td>string</td>
@@ -98,12 +114,16 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   - provide a sanity check for latitude,longitude values
 </td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>latitude</td>
   <td>number</td>
   <td></td>
   <td>signed decimal degrees (North, relative to Equator)</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>longitude</td>
   <td>number</td>
@@ -111,6 +131,8 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <td>signed decimal degrees (East, relative to IERS Reference Meridian)</td>
 </tr>
 </table>
+
+### Extended notes and examples on the _ properties
 
 ### altitude
 
@@ -178,24 +200,32 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <th>Format</th>
   <th>Description</th>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>description</td>
   <td>string</td>
   <td></td>
   <td>an optional free-text annotation about the object</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>format</td>
   <td>string</td>
   <td></td>
   <td>format of the value; optional</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>type</td>
   <td>string</td>
   <td></td>
   <td>type of the value; optional</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>value</td>
   <td></td>
@@ -203,6 +233,8 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <td>the value in a format correstponding to type</td>
 </tr>
 </table>
+
+### Extended notes and examples on the _ properties
 
 ### description
 
@@ -249,12 +281,16 @@ the value in a format correstponding to type
   <th>Format</th>
   <th>Description</th>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>id</td>
   <td>string</td>
   <td></td>
   <td>properly prefixed CURIE of the ontology term</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>label</td>
   <td>string</td>
@@ -262,6 +298,8 @@ the value in a format correstponding to type
   <td>the text label associated with the term</td>
 </tr>
 </table>
+
+### Extended notes and examples on the _ properties
 
 ### id
 
@@ -290,12 +328,16 @@ the text label associated with the term
   <th>Format</th>
   <th>Description</th>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>id</td>
   <td>string</td>
   <td></td>
   <td>properly prefixed CURIE of the external reference</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>relation</td>
   <td>string</td>
@@ -303,6 +345,8 @@ the text label associated with the term
   <td>the relation of the external reference to the object it was pointed from</td>
 </tr>
 </table>
+
+### Extended notes and examples on the _ properties
 
 ### id
 

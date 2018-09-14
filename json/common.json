@@ -1,41 +1,15 @@
 {
-   "info" : {
-      "version" : "2018-09-13",
-      "description" : "Definition of some prototype objects which are re-used in other schema documents.\n",
-      "title" : "GA4GH - common and shared object definitions\n"
-   },
    "definitions" : {
-      "Geo_class" : {
+      "Reference_class" : {
          "properties" : {
-            "country" : {
-               "example" : "Romania",
-               "type" : "string"
+            "id" : {
+               "example" : "pubmed:17440070",
+               "type" : "string",
+               "description" : "properly prefixed CURIE of the external reference"
             },
-            "latitude" : {
-               "D" : "float",
-               "description" : "signed decimal degrees (North, relative to Equator)",
-               "example" : "47.37",
-               "type" : "number"
-            },
-            "city" : {
-               "example" : "Timisoara",
-               "type" : "string"
-            },
-            "longitude" : {
-               "description" : "signed decimal degrees (East, relative to IERS Reference Meridian)",
-               "example" : "8.54",
-               "type" : "number",
-               "format" : "float"
-            },
-            "altitude" : {
-               "description" : "height in meters above the WGS 84 reference ellipsoid; otional",
-               "type" : "number",
-               "example" : "8848",
-               "format" : "float"
-            },
-            "label" : {
-               "description" : "A text representation, preferably using standard geographic identification elements, of the corresponding latitude,longitude(,altitude). This representation serves the purposes to\n  - capture standard data entry parameters\n  - provide a sanity check for latitude,longitude values\n",
-               "example" : "Str Marasesti 5, 300077 Timisoara, Romania",
+            "relation" : {
+               "description" : "the relation of the external reference to the object it was pointed from",
+               "example" : "denotes",
                "type" : "string"
             }
          }
@@ -43,47 +17,47 @@
       "Biocharacteristic_class" : {
          "properties" : {
             "class" : {
-               "description" : "an ontology_class object",
                "schema" : {
                   "$ref" : "#/Ontology_class"
                },
+               "description" : "an ontology_class object",
                "example" : {
-                  "id" : "ncit:c8294",
-                  "label" : "Pancreatic Adenocarcinoma"
+                  "label" : "Pancreatic Adenocarcinoma",
+                  "id" : "ncit:c8294"
                }
-            },
-            "negated" : {
-               "example" : "true",
-               "type" : "boolean",
-               "description" : "flag for negating this biocharacteristic_class object; a \"false\" is assumed as default and does not have to be stated"
             },
             "description" : {
                "description" : "a free-text description of this biocharacteristic",
                "type" : "string",
                "example" : "Invasive ductal breast carcinoma, metastasized"
+            },
+            "negated" : {
+               "example" : "true",
+               "type" : "boolean",
+               "description" : "flag for negating this biocharacteristic_class object; a \"false\" is assumed as default and does not have to be stated"
             }
          }
       },
       "Info_class" : {
          "properties" : {
+            "type" : {
+               "description" : "type of the value; optional",
+               "type" : "string",
+               "example" : "number"
+            },
+            "format" : {
+               "example" : "int64",
+               "type" : "string",
+               "description" : "format of the value; optional"
+            },
             "description" : {
                "type" : "string",
                "example" : "The base length of the called segment.",
                "description" : "an optional free-text annotation about the object"
             },
-            "type" : {
-               "type" : "string",
-               "example" : "number",
-               "description" : "type of the value; optional"
-            },
             "value" : {
                "description" : "the value in a format correstponding to type",
                "example" : "1503320"
-            },
-            "format" : {
-               "description" : "format of the value; optional",
-               "type" : "string",
-               "example" : "int64"
             }
          }
       },
@@ -101,20 +75,46 @@
             }
          }
       },
-      "Reference_class" : {
+      "Geo_class" : {
          "properties" : {
-            "relation" : {
-               "description" : "the relation of the external reference to the object it was pointed from",
-               "example" : "denotes",
+            "country" : {
+               "example" : "Romania",
                "type" : "string"
             },
-            "id" : {
-               "description" : "properly prefixed CURIE of the external reference",
-               "type" : "string",
-               "example" : "pubmed:17440070"
+            "altitude" : {
+               "type" : "number",
+               "format" : "float",
+               "example" : "8848",
+               "description" : "height in meters above the WGS 84 reference ellipsoid; otional"
+            },
+            "city" : {
+               "example" : "Timisoara",
+               "type" : "string"
+            },
+            "longitude" : {
+               "format" : "float",
+               "example" : "8.54",
+               "type" : "number",
+               "description" : "signed decimal degrees (East, relative to IERS Reference Meridian)"
+            },
+            "latitude" : {
+               "D" : "float",
+               "type" : "number",
+               "example" : "47.37",
+               "description" : "signed decimal degrees (North, relative to Equator)"
+            },
+            "label" : {
+               "description" : "A text representation, preferably using standard geographic identification elements, of the corresponding latitude,longitude(,altitude). This representation serves the purposes to\n  - capture standard data entry parameters\n  - provide a sanity check for latitude,longitude values\n",
+               "example" : "Str Marasesti 5, 300077 Timisoara, Romania",
+               "type" : "string"
             }
          }
       }
+   },
+   "info" : {
+      "title" : "GA4GH - common and shared object definitions\n",
+      "version" : "2018-09-13",
+      "description" : "Definition of some prototype objects which are re-used in other schema documents.\n"
    }
 }
 

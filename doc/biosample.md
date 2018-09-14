@@ -11,18 +11,24 @@ In this schema, a "biosample" as the source of the material of a molecular analy
   <th>Format</th>
   <th>Description</th>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>age_at_collection</td>
   <td>string</td>
   <td></td>
   <td>the age of the individual at time of biosample collection, as ISO8601 string</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>age_at_collection_class</td>
   <td></td>
   <td></td>
   <td>the age of the individual at time of biosample collection, as ontology object</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>biocharacteristics</td>
   <td>array</td>
@@ -31,18 +37,24 @@ In this schema, a "biosample" as the source of the material of a molecular analy
 Examples would be phenotypes, disease codes or other ontology classes specific to this biosample. In a complete data model (variants - (callsets) - biosamples - individuals), characteristics applying to the individual (e.g. sex, most phenotypes) should be annotated there.
 </td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>description</td>
   <td>string</td>
   <td></td>
   <td>A free text description of the biosample.</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>external_ids</td>
   <td>array</td>
   <td></td>
   <td>list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>geo_provenance</td>
   <td></td>
@@ -51,12 +63,16 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 Frequently this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.
 </td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>id</td>
   <td>string</td>
   <td></td>
   <td>The local-unique identifier of this biosample (referenced as "biosample_id").</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>individual_id</td>
   <td>string</td>
@@ -64,6 +80,8 @@ Frequently this value may reflect either the place of the laboratory where the a
   <td>In a complete data model "individual_id" represents the identifier of this biosample in the "individuals" collection.
 </td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>info</td>
   <td></td>
@@ -71,6 +89,8 @@ Frequently this value may reflect either the place of the laboratory where the a
   <td>This is a wrapper for objects without further specification in the schema.
 </td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>updated</td>
   <td>string</td>
@@ -78,6 +98,8 @@ Frequently this value may reflect either the place of the laboratory where the a
   <td>time of the last edit of this record, in ISO8601</td>
 </tr>
 </table>
+
+### Extended notes and examples on the _ properties
 
 ### age_at_collection
 
@@ -112,22 +134,22 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 'biocharacteristics' : [
   {
     'class' : {
-                 'label' : 'Pancreas, NOS',
-                 'id' : 'pgx:icdot:c25.9'
+                 'id' : 'pgx:icdot:c25.9',
+                 'label' : 'Pancreas, NOS'
                },
     'description' : 'Pancreatic Adenocarcinoma'
   },
   {
-    'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
-                 'id' : 'pgx:icdom:81403',
-                 'label' : 'Adenocarcinoma, NOS'
-               }
+                 'label' : 'Adenocarcinoma, NOS',
+                 'id' : 'pgx:icdom:81403'
+               },
+    'description' : 'Pancreatic Adenocarcinoma'
   },
   {
     'class' : {
-                 'label' : 'Pancreatic Adenocarcinoma',
-                 'id' : 'ncit:c8294'
+                 'id' : 'ncit:c8294',
+                 'label' : 'Pancreatic Adenocarcinoma'
                },
     'description' : 'Pancreatic Adenocarcinoma'
   }
@@ -141,11 +163,17 @@ The query will return all biosamples with an (exact) class.id of "pgx:icdom:8140
 db.biosamples.find( { "biocharacteristics.class.id" : "pgx:icdom:81403" } )
 ```
 
+------
+
+
 This call to the distinct funcion will return *all* bioterms ids for samples having some ncit id; to retrive only the ncit ids, this has to be followed by a regex filter (/^ncit/).
 
 ```
 db.biosamples.distinct( { "biocharacteristics.class.id", "biocharacteristics.class.id" : { $regex : /ncit/ } } )
 ```
+
+------
+
 ### description
 
 A free text description of the biosample.
@@ -164,16 +192,16 @@ list of reference_class objects with properly (e.g. identifiers.org) prefixed ex
 ```
 'external_ids' : [
   {
-    'id' : 'cellosaurus:CVCL_0312',
-    'relation' : 'provenance'
+    'relation' : 'provenance',
+    'id' : 'cellosaurus:CVCL_0312'
   },
   {
-    'relation' : 'report',
-    'id' : 'pubmed:17440070'
+    'id' : 'pubmed:17440070',
+    'relation' : 'report'
   },
   {
-    'relation' : 'technology',
-    'id' : 'geo:GPL4894'
+    'id' : 'geo:GPL4894',
+    'relation' : 'technology'
   },
   {
     'relation' : 'denotes',
@@ -187,6 +215,9 @@ the query will return all biosamples reported in this publication
 ```
 db.biosamples.find( { "external_ids.id" : "pubmed:17440070" } )
 ```
+
+------
+
 ### geo_provenance
 
 This geo_class attribute ideally describes the geographic location of where the sample was extracted.
@@ -197,11 +228,11 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'altitude' : 94,
   'longitude' : 21.23,
-  'city' : 'Timisoara',
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
   'latitude' : 45.75,
+  'city' : 'Timisoara',
+  'altitude' : 94,
   'country' : 'Romania'
 }
 ```
@@ -233,14 +264,14 @@ This is a wrapper for objects without further specification in the schema.
 
 ```
 'info' : {
+  'followup_time' : {
+                       'type' : 'ISO8601 string',
+                       'value' : 'P14M'
+                     },
   'death' : {
                'type' : 'boolean',
                'value' : 1
-             },
-  'followup_time' : {
-                       'value' : 'P14M',
-                       'type' : 'ISO8601 string'
-                     }
+             }
 }
 ```
 
@@ -250,6 +281,9 @@ This query retrieves biosamples with an ISO8601 period value for "followup_time"
 ```
 db.biosamples.find( {"info" : { $elemMatch: { "followup_time.value" : { $regex : /\P/ }, "death.value" : true } } } )
 ```
+
+------
+
 ### updated
 
 time of the last edit of this record, in ISO8601

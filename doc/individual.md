@@ -12,6 +12,8 @@ An individual is a single organism (here typically a human).
   <th>Format</th>
   <th>Description</th>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>biocharacteristics</td>
   <td>array</td>
@@ -19,12 +21,16 @@ An individual is a single organism (here typically a human).
   <td>list of biocharacteristic_class objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and "systemic" phenotypes and diseases
 </td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>description</td>
   <td>string</td>
   <td></td>
   <td>A free text description of the individual.</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>geo_provenance</td>
   <td></td>
@@ -33,18 +39,24 @@ An individual is a single organism (here typically a human).
 This value may reflect either the place of burth or residence, but frequently may correspond to the place the study was performed.
 </td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>id</td>
   <td>string</td>
   <td></td>
   <td>The local-unique identifier of this individual (referenced as "individual_id").</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>info</td>
   <td></td>
   <td></td>
   <td>additional variant information, as defined in the example and accompanying documentation</td>
 </tr>
+### Properties of the _ class
+
 <tr>
   <td>updated</td>
   <td>string</td>
@@ -52,6 +64,8 @@ This value may reflect either the place of burth or residence, but frequently ma
   <td>time of the last edit of this record, in ISO8601</td>
 </tr>
 </table>
+
+### Extended notes and examples on the _ properties
 
 ### biocharacteristics
 
@@ -70,18 +84,18 @@ list of biocharacteristic_class objects with properly prefixed term ids, describ
                }
   },
   {
+    'description' : 'Jean-Luc Picard',
     'class' : {
                  'id' : 'NCBITaxon:9606',
                  'label' : 'Homo sapiens'
-               },
-    'description' : 'Jean-Luc Picard'
+               }
   },
   {
-    'description' : 'Patient with Down syndrome',
     'class' : {
-                 'label' : 'Genetic anticipation',
-                 'id' : 'HP:0003745'
-               }
+                 'id' : 'HP:0003745',
+                 'label' : 'Genetic anticipation'
+               },
+    'description' : 'Patient with Down syndrome'
   }
 ]
 ```
@@ -92,10 +106,16 @@ the query will return all individuals who have been properly labeled as human
 db.individual.find( { "biocharacteristics.class.id" : "NCBITaxon:9606" } )
 ```
 
+------
+
+
 this call to the distinct funcion will return *all* HPO annotated classes
 ```
 db.biosamples.distinct( { "biocharacteristics.class.id", "biocharacteristics.class.id" : { $regex : /HP\:/i } } )
 ```
+
+------
+
 ### description
 
 A free text description of the individual.
@@ -115,12 +135,12 @@ This value may reflect either the place of burth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'country' : 'Romania',
   'altitude' : 94,
-  'longitude' : 21.23,
-  'latitude' : 45.75,
   'city' : 'Timisoara',
-  'country' : 'Romania'
+  'latitude' : 45.75,
+  'longitude' : 21.23,
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
 }
 ```
 ### id
@@ -140,14 +160,14 @@ additional variant information, as defined in the example and accompanying docum
 
 ```
 'info' : {
-  'last_name' : {
-                   'type' : 'string',
-                   'value' : 'Tichy'
-                 },
   'first_name' : {
                     'type' : 'string',
                     'value' : 'Ion'
-                  }
+                  },
+  'last_name' : {
+                   'value' : 'Tichy',
+                   'type' : 'string'
+                 }
 }
 ```
 ### updated
