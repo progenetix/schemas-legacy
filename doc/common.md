@@ -3,22 +3,41 @@
 
 Definition of some prototype objects which are re-used in other schema documents.
 
-
 ## Biocharacteristic_class
 
-### class
+<table>
+<tr>
+  <th>property</th>
+  <th>type</th>
+  <th>format</th>
+</tr>
+
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>### class
 
 an ontology_class object
 
 #### Example
 
 ```
-"class" : {
+'class' : {
   'id' : 'ncit:c8294',
   'label' : 'Pancreatic Adenocarcinoma'
 }
 ```
-
 ### description
 
 a free-text description of this biocharacteristic
@@ -26,9 +45,8 @@ a free-text description of this biocharacteristic
 #### Example
 
 ```
-"description" : "Invasive ductal breast carcinoma, metastasized"
+'description' : "Invasive ductal breast carcinoma, metastasized"
 ```
-
 ### negated
 
 flag for negating this biocharacteristic_class object; a "false" is assumed as default and does not have to be stated
@@ -36,21 +54,55 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
 #### Example
 
 ```
-"negated" : "true"
+'negated' : "true"
 ```
-
 ## Geo_class
 
-### altitude
+<table>
+<tr>
+  <th>property</th>
+  <th>type</th>
+  <th>format</th>
+</tr>
+
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>### altitude
 
 height in meters above the WGS 84 reference ellipsoid; otional
 
 #### Example
 
 ```
-"altitude" : 8848
+'altitude' : 8848
 ```
-
 ### city
 
 
@@ -58,9 +110,8 @@ height in meters above the WGS 84 reference ellipsoid; otional
 #### Example
 
 ```
-"city" : "Timisoara"
+'city' : "Timisoara"
 ```
-
 ### country
 
 
@@ -68,9 +119,8 @@ height in meters above the WGS 84 reference ellipsoid; otional
 #### Example
 
 ```
-"country" : "Romania"
+'country' : "Romania"
 ```
-
 ### label
 
 A text representation, preferably using standard geographic identification elements, of the corresponding latitude,longitude(,altitude). This representation serves the purposes to
@@ -81,9 +131,8 @@ A text representation, preferably using standard geographic identification eleme
 #### Example
 
 ```
-"label" : "Str Marasesti 5, 300077 Timisoara, Romania"
+'label' : "Str Marasesti 5, 300077 Timisoara, Romania"
 ```
-
 ### latitude
 
 signed decimal degrees (North, relative to Equator)
@@ -91,9 +140,8 @@ signed decimal degrees (North, relative to Equator)
 #### Example
 
 ```
-"latitude" : 47.37
+'latitude' : 47.37
 ```
-
 ### longitude
 
 signed decimal degrees (East, relative to IERS Reference Meridian)
@@ -101,21 +149,45 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
 #### Example
 
 ```
-"longitude" : 8.54
+'longitude' : 8.54
 ```
-
 ## Info_class
 
-### description
+<table>
+<tr>
+  <th>property</th>
+  <th>type</th>
+  <th>format</th>
+</tr>
+
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>### description
 
 an optional free-text annotation about the object
 
 #### Example
 
 ```
-"description" : "The base length of the called segment."
+'description' : "The base length of the called segment."
 ```
-
 ### format
 
 format of the value; optional
@@ -123,9 +195,8 @@ format of the value; optional
 #### Example
 
 ```
-"format" : "int64"
+'format' : "int64"
 ```
-
 ### type
 
 type of the value; optional
@@ -133,9 +204,8 @@ type of the value; optional
 #### Example
 
 ```
-"type" : "number"
+'type' : "number"
 ```
-
 ### value
 
 the value in a format correstponding to type
@@ -143,21 +213,35 @@ the value in a format correstponding to type
 #### Example
 
 ```
-"value" : 1503320
+'value' : 1503320
 ```
-
 ## Ontology_class
 
-### id
+<table>
+<tr>
+  <th>property</th>
+  <th>type</th>
+  <th>format</th>
+</tr>
+
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>### id
 
 properly prefixed CURIE of the ontology term
 
 #### Example
 
 ```
-"id" : "ncit:C8294"
+'id' : "ncit:C8294"
 ```
-
 ### label
 
 the text label associated with the term
@@ -165,21 +249,35 @@ the text label associated with the term
 #### Example
 
 ```
-"label" : "Pancreatic Adenocarcinoma"
+'label' : "Pancreatic Adenocarcinoma"
 ```
-
 ## Reference_class
 
-### id
+<table>
+<tr>
+  <th>property</th>
+  <th>type</th>
+  <th>format</th>
+</tr>
+
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>### id
 
 properly prefixed CURIE of the external reference
 
 #### Example
 
 ```
-"id" : "pubmed:17440070"
+'id' : "pubmed:17440070"
 ```
-
 ### relation
 
 the relation of the external reference to the object it was pointed from
@@ -187,5 +285,5 @@ the relation of the external reference to the object it was pointed from
 #### Example
 
 ```
-"relation" : "denotes"
+'relation' : "denotes"
 ```

@@ -2,19 +2,53 @@
 
 The callset object contains information about an experiment performed on material from a single biosample and is a shared identifier for all variants detected in this experiment, attributed to the referenced biosample. 
 
-
 ## Callset
 
-### biosample_id
+<table>
+<tr>
+  <th>property</th>
+  <th>type</th>
+  <th>format</th>
+</tr>
+
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>
+<tr>
+  <td>$property</td>
+  <td>$attr{$class}->{properties}->{$property}->{type}</td>
+  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+</tr>### biosample_id
 
 The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
 
 #### Example
 
 ```
-"biosample_id" : "pgx-bs-987647"
+'biosample_id' : "pgx-bs-987647"
 ```
-
 ### description
 
 A free text description of the callset.
@@ -22,9 +56,8 @@ A free text description of the callset.
 #### Example
 
 ```
-"description" : "SNP6 array of cancer sample BRCA-0893"
+'description' : "SNP6 array of cancer sample BRCA-0893"
 ```
-
 ### geo_provenance
 
 This geo_class attribute ideally describes the geographic location of where this callset was analysed.
@@ -33,15 +66,14 @@ This geo_class attribute ideally describes the geographic location of where this
 #### Example
 
 ```
-"geo_provenance" : {
+'geo_provenance' : {
   'latitude' : 45.75,
-  'city' : 'Timisoara',
-  'longitude' : 21.23,
   'country' : 'Romania',
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'longitude' : 21.23,
+  'city' : 'Timisoara'
 }
 ```
-
 ### id
 
 The local-unique identifier of this callset (referenced as "callset_id").
@@ -49,9 +81,8 @@ The local-unique identifier of this callset (referenced as "callset_id").
 #### Example
 
 ```
-"id" : "GSM264198"
+'id' : "GSM264198"
 ```
-
 ### info
 
 additional variant information, as defined in the example and accompanying documentation
@@ -59,16 +90,13 @@ additional variant information, as defined in the example and accompanying docum
 #### Example
 
 ```
-"info" : {
+'info' : {
   'cnv_maps' : {
                   'value' : {
-                               'binning' : {
-                                              'value' : 1000000,
-                                              'type' : 'number',
-                                              'description' : 'interval size in bases for the binning, when creating the cnv_maps',
-                                              'format' : 'int64'
-                                            },
                                'dup_map' : {
+                                              'description' : 'gain cnv status for the corresponding genome intervals
+',
+                                              'type' : 'array',
                                               'value' : [
                                                            '',
                                                            '',
@@ -81,10 +109,13 @@ additional variant information, as defined in the example and accompanying docum
                                                            '',
                                                            '',
                                                            ''
-                                                         ],
-                                              'type' : 'array',
-                                              'description' : 'gain cnv status for the corresponding genome intervals
-'
+                                                         ]
+                                            },
+                               'binning' : {
+                                              'value' : 1000000,
+                                              'description' : 'interval size in bases for the binning, when creating the cnv_maps',
+                                              'type' : 'number',
+                                              'format' : 'int64'
                                             }
                              },
                   'schema' : {
@@ -96,7 +127,6 @@ With a standard binning of 1MB, the arrays would contain ~3000 values each (depe
                 }
 }
 ```
-
 ### updated
 
 time of the last edit of this record, in ISO8601
@@ -104,5 +134,5 @@ time of the last edit of this record, in ISO8601
 #### Example
 
 ```
-"updated" : "2017-10-25T07:06:03Z"
+'updated' : "2017-10-25T07:06:03Z"
 ```
