@@ -81,12 +81,13 @@ END
       foreach my $property (sort keys %{ $attr{$class}->{properties} }) {
       
         my $md_example  =   _reformat_example($attr{$class}->{properties}->{$property}->{example});
-        $class_md   .=  '
+        $class_md   .=  <<END;
 <tr>
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>';
+</tr>
+END
         $prop_md    .=  <<END;
 ### $property
 

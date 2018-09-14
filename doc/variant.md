@@ -11,72 +11,72 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>alternate_bases</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>biosample_id</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>callset_id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>digest</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>end</td>
+  <td>array</td>
+  <td>int64</td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>genotype</td>
+  <td>array</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>info</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>mate_name</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>reference_bases</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>reference_name</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>start</td>
+  <td>array</td>
+  <td>int64</td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>updated</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>variant_type</td>
+  <td>string</td>
+  <td></td>
+</tr>
+</table>
 
 ### alternate_bases
 
@@ -153,14 +153,14 @@ additional variant information, as defined in the example and accompanying docum
 ```
 'info' : {
   'cnv_length' : {
-                    'format' : 'int64',
                     'value' : 1205290,
+                    'format' : 'int64',
                     'type' : 'number'
                   },
   'cnv_value' : {
-                   'type' : 'number',
                    'value' : '-0.294',
-                   'format' : 'float'
+                   'format' : 'float',
+                   'type' : 'number'
                  }
 }
 ```

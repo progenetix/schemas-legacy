@@ -10,37 +10,37 @@ The callset object contains information about an experiment performed on materia
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>biosample_id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>description</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>geo_provenance</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>info</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>updated</td>
+  <td>string</td>
+  <td></td>
+</tr>
+</table>
 
 ### biosample_id
 
@@ -69,11 +69,11 @@ This geo_class attribute ideally describes the geographic location of where this
 
 ```
 'geo_provenance' : {
+  'city' : 'Timisoara',
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
   'latitude' : 45.75,
-  'city' : 'Timisoara',
-  'country' : 'Romania',
-  'longitude' : 21.23
+  'longitude' : 21.23,
+  'country' : 'Romania'
 }
 ```
 ### id
@@ -98,6 +98,12 @@ additional variant information, as defined in the example and accompanying docum
                                 '$ref' : './common/Info_class'
                               },
                   'value' : {
+                               'binning' : {
+                                              'value' : 1000000,
+                                              'description' : 'interval size in bases for the binning, when creating the cnv_maps',
+                                              'type' : 'number',
+                                              'format' : 'int64'
+                                            },
                                'dup_map' : {
                                               'type' : 'array',
                                               'description' : 'gain cnv status for the corresponding genome intervals
@@ -115,12 +121,6 @@ additional variant information, as defined in the example and accompanying docum
                                                            '',
                                                            ''
                                                          ]
-                                            },
-                               'binning' : {
-                                              'type' : 'number',
-                                              'value' : 1000000,
-                                              'description' : 'interval size in bases for the binning, when creating the cnv_maps',
-                                              'format' : 'int64'
                                             }
                              },
                   'description' : 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.

@@ -11,37 +11,37 @@ An individual is a single organism (here typically a human).
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>biocharacteristics</td>
+  <td>array</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>description</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>geo_provenance</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>info</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>updated</td>
+  <td>string</td>
+  <td></td>
+</tr>
+</table>
 
 ### biocharacteristics
 
@@ -61,17 +61,17 @@ list of biocharacteristic_class objects with properly prefixed term ids, describ
   },
   {
     'class' : {
-                 'id' : 'NCBITaxon:9606',
-                 'label' : 'Homo sapiens'
+                 'label' : 'Homo sapiens',
+                 'id' : 'NCBITaxon:9606'
                },
     'description' : 'Jean-Luc Picard'
   },
   {
+    'description' : 'Patient with Down syndrome',
     'class' : {
-                 'label' : 'Genetic anticipation',
-                 'id' : 'HP:0003745'
-               },
-    'description' : 'Patient with Down syndrome'
+                 'id' : 'HP:0003745',
+                 'label' : 'Genetic anticipation'
+               }
   }
 ]
 ```
@@ -105,11 +105,11 @@ This value may reflect either the place of burth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'city' : 'Timisoara',
   'latitude' : 45.75,
-  'country' : 'Romania',
   'altitude' : 94,
   'longitude' : 21.23,
+  'country' : 'Romania',
+  'city' : 'Timisoara',
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
 }
 ```
@@ -130,14 +130,14 @@ additional variant information, as defined in the example and accompanying docum
 
 ```
 'info' : {
-  'last_name' : {
-                   'value' : 'Tichy',
-                   'type' : 'string'
-                 },
   'first_name' : {
                     'value' : 'Ion',
                     'type' : 'string'
-                  }
+                  },
+  'last_name' : {
+                   'type' : 'string',
+                   'value' : 'Tichy'
+                 }
 }
 ```
 ### updated

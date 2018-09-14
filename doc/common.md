@@ -11,22 +11,22 @@ Definition of some prototype objects which are re-used in other schema documents
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>class</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>description</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>negated</td>
+  <td>boolean</td>
+  <td></td>
+</tr>
+</table>
 
 ### class
 
@@ -66,37 +66,37 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>altitude</td>
+  <td>number</td>
+  <td>float</td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>city</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>country</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>label</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>latitude</td>
+  <td>number</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>longitude</td>
+  <td>number</td>
+  <td>float</td>
+</tr>
+</table>
 
 ### altitude
 
@@ -163,27 +163,27 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>description</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>format</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>type</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>value</td>
+  <td></td>
+  <td></td>
+</tr>
+</table>
 
 ### description
 
@@ -229,17 +229,17 @@ the value in a format correstponding to type
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>label</td>
+  <td>string</td>
+  <td></td>
+</tr>
+</table>
 
 ### id
 
@@ -267,17 +267,17 @@ the text label associated with the term
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>relation</td>
+  <td>string</td>
+  <td></td>
+</tr>
+</table>
 
 ### id
 

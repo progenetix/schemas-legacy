@@ -10,57 +10,57 @@ In this schema, a "biosample" as the source of the material of a molecular analy
   <th>type</th>
   <th>format</th>
 </tr>
-
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>age_at_collection</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>age_at_collection_class</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>biocharacteristics</td>
+  <td>array</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>description</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>external_ids</td>
+  <td>array</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>geo_provenance</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>individual_id</td>
+  <td>string</td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>info</td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-  <td>$property</td>
-  <td>$attr{$class}->{properties}->{$property}->{type}</td>
-  <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr></table>
+  <td>updated</td>
+  <td>string</td>
+  <td></td>
+</tr>
+</table>
 
 ### age_at_collection
 
@@ -79,8 +79,8 @@ the age of the individual at time of biosample collection, as ontology object
 
 ```
 'age_at_collection_class' : {
-  'label' : 'Juvenile onset',
-  'id' : 'HP:0003621'
+  'id' : 'HP:0003621',
+  'label' : 'Juvenile onset'
 }
 ```
 ### biocharacteristics
@@ -96,23 +96,23 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
   {
     'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
-                 'label' : 'Pancreas, NOS',
-                 'id' : 'pgx:icdot:c25.9'
+                 'id' : 'pgx:icdot:c25.9',
+                 'label' : 'Pancreas, NOS'
                }
   },
   {
     'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
-                 'id' : 'pgx:icdom:81403',
-                 'label' : 'Adenocarcinoma, NOS'
+                 'label' : 'Adenocarcinoma, NOS',
+                 'id' : 'pgx:icdom:81403'
                }
   },
   {
-    'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
                  'id' : 'ncit:c8294',
                  'label' : 'Pancreatic Adenocarcinoma'
-               }
+               },
+    'description' : 'Pancreatic Adenocarcinoma'
   }
 ]
 ```
@@ -151,16 +151,16 @@ list of reference_class objects with properly (e.g. identifiers.org) prefixed ex
     'id' : 'cellosaurus:CVCL_0312'
   },
   {
-    'relation' : 'report',
-    'id' : 'pubmed:17440070'
+    'id' : 'pubmed:17440070',
+    'relation' : 'report'
   },
   {
-    'relation' : 'technology',
-    'id' : 'geo:GPL4894'
+    'id' : 'geo:GPL4894',
+    'relation' : 'technology'
   },
   {
-    'id' : 'geo:GSM185088',
-    'relation' : 'denotes'
+    'relation' : 'denotes',
+    'id' : 'geo:GSM185088'
   }
 ]
 ```
@@ -180,12 +180,12 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
-  'country' : 'Romania',
-  'altitude' : 94,
   'longitude' : 21.23,
-  'city' : 'Timisoara',
   'latitude' : 45.75,
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
+  'altitude' : 94,
+  'country' : 'Romania',
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'city' : 'Timisoara'
 }
 ```
 ### id
@@ -216,14 +216,14 @@ This is a wrapper for objects without further specification in the schema.
 
 ```
 'info' : {
-  'followup_time' : {
-                       'type' : 'ISO8601 string',
-                       'value' : 'P14M'
-                     },
   'death' : {
-               'type' : 'boolean',
-               'value' : 1
-             }
+               'value' : 1,
+               'type' : 'boolean'
+             },
+  'followup_time' : {
+                       'value' : 'P14M',
+                       'type' : 'ISO8601 string'
+                     }
 }
 ```
 
