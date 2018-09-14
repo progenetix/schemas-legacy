@@ -107,8 +107,10 @@ The document describes attributes of the "variant" object, which e.g. can be ins
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Variant</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### alternate_bases
 
 one or more bases relative to start position of the reference genome,replacing the reference_bases value; for precise variants
@@ -118,6 +120,8 @@ one or more bases relative to start position of the reference genome,replacing t
 ```
 'alternate_bases' : "AC"
 ```
+
+--------------------------------------------------------------------------------
 ### biosample_id
 
 The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
@@ -127,6 +131,8 @@ The identifier ("biosample.id") of the biosample this variant was reported from.
 ```
 'biosample_id' : "pgx-bs-987647"
 ```
+
+--------------------------------------------------------------------------------
 ### callset_id
 
 The identifier ("callset.id") of the callset this variant is part of.
@@ -136,6 +142,8 @@ The identifier ("callset.id") of the callset this variant is part of.
 ```
 'callset_id' : "PGX_AM_CS_GSM1690424"
 ```
+
+--------------------------------------------------------------------------------
 ### digest
 
 concatenated unique specific elements of the variant
@@ -145,6 +153,8 @@ concatenated unique specific elements of the variant
 ```
 'digest' : "4:12282-46465:DEL"
 ```
+
+--------------------------------------------------------------------------------
 ### end
 
 array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers
@@ -164,8 +174,8 @@ the query will return all variants with any overlap of the CDKN2A CDR
 db.variants.find( { "reference_name" : 9,  "variant_type" : "DEL", "start" : { $lteq : 21975098 }, "end" : { $gteq : 21967753 } } )
 ```
 
-------
 
+--------------------------------------------------------------------------------
 ### genotype
 
 list of strings, which represent the (phased) alleles in which the variant was being observed
@@ -178,6 +188,8 @@ list of strings, which represent the (phased) alleles in which the variant was b
   '.'
 ]
 ```
+
+--------------------------------------------------------------------------------
 ### info
 
 additional variant information, as defined in the example and accompanying documentation
@@ -188,16 +200,18 @@ additional variant information, as defined in the example and accompanying docum
 'info' : {
   'cnv_value' : {
                    'format' : 'float',
-                   'value' : '-0.294',
-                   'type' : 'number'
+                   'type' : 'number',
+                   'value' : '-0.294'
                  },
   'cnv_length' : {
                     'value' : 1205290,
-                    'format' : 'int64',
-                    'type' : 'number'
+                    'type' : 'number',
+                    'format' : 'int64'
                   }
 }
 ```
+
+--------------------------------------------------------------------------------
 ### mate_name
 
 Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.
@@ -207,6 +221,8 @@ Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting 
 ```
 'mate_name' : 14
 ```
+
+--------------------------------------------------------------------------------
 ### reference_bases
 
 one or more bases at start position in the reference genome, which have been replaced by the alternate_bases value; for precise variants
@@ -216,6 +232,8 @@ one or more bases at start position in the reference genome, which have been rep
 ```
 'reference_bases' : "G"
 ```
+
+--------------------------------------------------------------------------------
 ### reference_name
 
 Reference name (chromosome). Accepting values 1-22, X, Y.
@@ -225,6 +243,8 @@ Reference name (chromosome). Accepting values 1-22, X, Y.
 ```
 'reference_name' : 8
 ```
+
+--------------------------------------------------------------------------------
 ### start
 
 array of 1 or 2 (for imprecise end position of structural variant) integers
@@ -236,6 +256,8 @@ array of 1 or 2 (for imprecise end position of structural variant) integers
   20867740
 ]
 ```
+
+--------------------------------------------------------------------------------
 ### updated
 
 time of the last edit of this record, in ISO8601
@@ -245,6 +267,8 @@ time of the last edit of this record, in ISO8601
 ```
 'updated' : "2017-10-25T07:06:03Z"
 ```
+
+--------------------------------------------------------------------------------
 ### variant_type
 
 the variant type in case of a named (structural) variant (DUP | DEL | BRK ...)

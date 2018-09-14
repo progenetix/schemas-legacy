@@ -91,8 +91,10 @@ Frequently this value may reflect either the place of the laboratory where the a
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Biosample</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### age_at_collection
 
 the age of the individual at time of biosample collection, as ISO8601 string
@@ -102,6 +104,8 @@ the age of the individual at time of biosample collection, as ISO8601 string
 ```
 'age_at_collection' : "P56Y"
 ```
+
+--------------------------------------------------------------------------------
 ### age_at_collection_class
 
 the age of the individual at time of biosample collection, as ontology object
@@ -114,6 +118,8 @@ the age of the individual at time of biosample collection, as ontology object
   'label' : 'Juvenile onset'
 }
 ```
+
+--------------------------------------------------------------------------------
 ### biocharacteristics
 
 "biocharacteristics" represents a wrapper list of "biocharacteristic_class" objects with properly prefixed term ids, describing features of the biosample.
@@ -125,11 +131,11 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
+    'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
                  'id' : 'pgx:icdot:c25.9',
                  'label' : 'Pancreas, NOS'
-               },
-    'description' : 'Pancreatic Adenocarcinoma'
+               }
   },
   {
     'description' : 'Pancreatic Adenocarcinoma',
@@ -139,11 +145,11 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
                }
   },
   {
+    'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
                  'label' : 'Pancreatic Adenocarcinoma',
                  'id' : 'ncit:c8294'
-               },
-    'description' : 'Pancreatic Adenocarcinoma'
+               }
   }
 ]
 ```
@@ -155,8 +161,6 @@ The query will return all biosamples with an (exact) class.id of "pgx:icdom:8140
 db.biosamples.find( { "biocharacteristics.class.id" : "pgx:icdom:81403" } )
 ```
 
-------
-
 
 This call to the distinct funcion will return *all* bioterms ids for samples having some ncit id; to retrive only the ncit ids, this has to be followed by a regex filter (/^ncit/).
 
@@ -164,8 +168,8 @@ This call to the distinct funcion will return *all* bioterms ids for samples hav
 db.biosamples.distinct( { "biocharacteristics.class.id", "biocharacteristics.class.id" : { $regex : /ncit/ } } )
 ```
 
-------
 
+--------------------------------------------------------------------------------
 ### description
 
 A free text description of the biosample.
@@ -175,6 +179,8 @@ A free text description of the biosample.
 ```
 'description' : "Burkitt lymphoma, cell line Namalwa"
 ```
+
+--------------------------------------------------------------------------------
 ### external_ids
 
 list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship
@@ -184,16 +190,16 @@ list of reference_class objects with properly (e.g. identifiers.org) prefixed ex
 ```
 'external_ids' : [
   {
-    'id' : 'cellosaurus:CVCL_0312',
-    'relation' : 'provenance'
+    'relation' : 'provenance',
+    'id' : 'cellosaurus:CVCL_0312'
   },
   {
     'relation' : 'report',
     'id' : 'pubmed:17440070'
   },
   {
-    'relation' : 'technology',
-    'id' : 'geo:GPL4894'
+    'id' : 'geo:GPL4894',
+    'relation' : 'technology'
   },
   {
     'relation' : 'denotes',
@@ -208,8 +214,8 @@ the query will return all biosamples reported in this publication
 db.biosamples.find( { "external_ids.id" : "pubmed:17440070" } )
 ```
 
-------
 
+--------------------------------------------------------------------------------
 ### geo_provenance
 
 This geo_class attribute ideally describes the geographic location of where the sample was extracted.
@@ -220,14 +226,16 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
-  'altitude' : 94,
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
   'city' : 'Timisoara',
   'country' : 'Romania',
-  'longitude' : 21.23,
-  'latitude' : 45.75
+  'latitude' : 45.75,
+  'altitude' : 94,
+  'longitude' : 21.23
 }
 ```
+
+--------------------------------------------------------------------------------
 ### id
 
 The local-unique identifier of this biosample (referenced as "biosample_id").
@@ -237,6 +245,8 @@ The local-unique identifier of this biosample (referenced as "biosample_id").
 ```
 'id' : "AM_BS__NCBISKYCGH-1993"
 ```
+
+--------------------------------------------------------------------------------
 ### individual_id
 
 In a complete data model "individual_id" represents the identifier of this biosample in the "individuals" collection.
@@ -247,6 +257,8 @@ In a complete data model "individual_id" represents the identifier of this biosa
 ```
 'individual_id' : "ind-cnhl-1293347-004"
 ```
+
+--------------------------------------------------------------------------------
 ### info
 
 This is a wrapper for objects without further specification in the schema.
@@ -256,14 +268,14 @@ This is a wrapper for objects without further specification in the schema.
 
 ```
 'info' : {
-  'death' : {
-               'type' : 'boolean',
-               'value' : 1
-             },
   'followup_time' : {
-                       'value' : 'P14M',
-                       'type' : 'ISO8601 string'
-                     }
+                       'type' : 'ISO8601 string',
+                       'value' : 'P14M'
+                     },
+  'death' : {
+               'value' : 1,
+               'type' : 'boolean'
+             }
 }
 ```
 
@@ -274,8 +286,8 @@ This query retrieves biosamples with an ISO8601 period value for "followup_time"
 db.biosamples.find( {"info" : { $elemMatch: { "followup_time.value" : { $regex : /\P/ }, "death.value" : true } } } )
 ```
 
-------
 
+--------------------------------------------------------------------------------
 ### updated
 
 time of the last edit of this record, in ISO8601

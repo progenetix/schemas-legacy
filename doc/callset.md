@@ -58,8 +58,10 @@ The callset object contains information about an experiment performed on materia
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Callset</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### biosample_id
 
 The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
@@ -69,6 +71,8 @@ The identifier ("biosample.id") of the biosample this variant was reported from.
 ```
 'biosample_id' : "pgx-bs-987647"
 ```
+
+--------------------------------------------------------------------------------
 ### description
 
 A free text description of the callset.
@@ -78,6 +82,8 @@ A free text description of the callset.
 ```
 'description' : "SNP6 array of cancer sample BRCA-0893"
 ```
+
+--------------------------------------------------------------------------------
 ### geo_provenance
 
 This geo_class attribute ideally describes the geographic location of where this callset was analysed.
@@ -87,13 +93,15 @@ This geo_class attribute ideally describes the geographic location of where this
 
 ```
 'geo_provenance' : {
+  'country' : 'Romania',
+  'city' : 'Timisoara',
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
   'latitude' : 45.75,
-  'longitude' : 21.23,
-  'country' : 'Romania',
-  'city' : 'Timisoara'
+  'longitude' : 21.23
 }
 ```
+
+--------------------------------------------------------------------------------
 ### id
 
 The local-unique identifier of this callset (referenced as "callset_id").
@@ -103,6 +111,8 @@ The local-unique identifier of this callset (referenced as "callset_id").
 ```
 'id' : "GSM264198"
 ```
+
+--------------------------------------------------------------------------------
 ### info
 
 additional variant information, as defined in the example and accompanying documentation
@@ -114,6 +124,8 @@ additional variant information, as defined in the example and accompanying docum
   'cnv_maps' : {
                   'value' : {
                                'dup_map' : {
+                                              'description' : 'gain cnv status for the corresponding genome intervals
+',
                                               'value' : [
                                                            '',
                                                            '',
@@ -127,26 +139,26 @@ additional variant information, as defined in the example and accompanying docum
                                                            '',
                                                            ''
                                                          ],
-                                              'description' : 'gain cnv status for the corresponding genome intervals
-',
                                               'type' : 'array'
                                             },
                                'binning' : {
                                               'type' : 'number',
+                                              'format' : 'int64',
                                               'description' : 'interval size in bases for the binning, when creating the cnv_maps',
-                                              'value' : 1000000,
-                                              'format' : 'int64'
+                                              'value' : 1000000
                                             }
                              },
-                  'description' : 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
-With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
-',
                   'schema' : {
                                 '$ref' : './common/Info_class'
-                              }
+                              },
+                  'description' : 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
+With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
+'
                 }
 }
 ```
+
+--------------------------------------------------------------------------------
 ### updated
 
 time of the last edit of this record, in ISO8601

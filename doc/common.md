@@ -37,8 +37,10 @@ Definition of some prototype objects which are re-used in other schema documents
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Biocharacteristic_class</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### class
 
 an ontology_class object
@@ -51,6 +53,8 @@ an ontology_class object
   'id' : 'ncit:c8294'
 }
 ```
+
+--------------------------------------------------------------------------------
 ### description
 
 a free-text description of this biocharacteristic
@@ -60,6 +64,8 @@ a free-text description of this biocharacteristic
 ```
 'description' : "Invasive ductal breast carcinoma, metastasized"
 ```
+
+--------------------------------------------------------------------------------
 ### negated
 
 flag for negating this biocharacteristic_class object; a "false" is assumed as default and does not have to be stated
@@ -127,8 +133,10 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Geo_class</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### altitude
 
 height in meters above the WGS 84 reference ellipsoid; otional
@@ -138,6 +146,8 @@ height in meters above the WGS 84 reference ellipsoid; otional
 ```
 'altitude' : 8848
 ```
+
+--------------------------------------------------------------------------------
 ### city
 
 
@@ -147,6 +157,8 @@ height in meters above the WGS 84 reference ellipsoid; otional
 ```
 'city' : "Timisoara"
 ```
+
+--------------------------------------------------------------------------------
 ### country
 
 
@@ -156,6 +168,8 @@ height in meters above the WGS 84 reference ellipsoid; otional
 ```
 'country' : "Romania"
 ```
+
+--------------------------------------------------------------------------------
 ### label
 
 A text representation, preferably using standard geographic identification elements, of the corresponding latitude,longitude(,altitude). This representation serves the purposes to
@@ -168,6 +182,8 @@ A text representation, preferably using standard geographic identification eleme
 ```
 'label' : "Str Marasesti 5, 300077 Timisoara, Romania"
 ```
+
+--------------------------------------------------------------------------------
 ### latitude
 
 signed decimal degrees (North, relative to Equator)
@@ -177,6 +193,8 @@ signed decimal degrees (North, relative to Equator)
 ```
 'latitude' : 47.37
 ```
+
+--------------------------------------------------------------------------------
 ### longitude
 
 signed decimal degrees (East, relative to IERS Reference Meridian)
@@ -227,8 +245,10 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Info_class</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### description
 
 an optional free-text annotation about the object
@@ -238,6 +258,8 @@ an optional free-text annotation about the object
 ```
 'description' : "The base length of the called segment."
 ```
+
+--------------------------------------------------------------------------------
 ### format
 
 format of the value; optional
@@ -247,6 +269,8 @@ format of the value; optional
 ```
 'format' : "int64"
 ```
+
+--------------------------------------------------------------------------------
 ### type
 
 type of the value; optional
@@ -256,6 +280,8 @@ type of the value; optional
 ```
 'type' : "number"
 ```
+
+--------------------------------------------------------------------------------
 ### value
 
 the value in a format correstponding to type
@@ -292,8 +318,10 @@ the value in a format correstponding to type
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Ontology_class</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### id
 
 properly prefixed CURIE of the ontology term
@@ -303,6 +331,8 @@ properly prefixed CURIE of the ontology term
 ```
 'id' : "ncit:C8294"
 ```
+
+--------------------------------------------------------------------------------
 ### label
 
 the text label associated with the term
@@ -339,8 +369,10 @@ the text label associated with the term
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Reference_class</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### id
 
 properly prefixed CURIE of the external reference
@@ -350,6 +382,8 @@ properly prefixed CURIE of the external reference
 ```
 'id' : "pubmed:17440070"
 ```
+
+--------------------------------------------------------------------------------
 ### relation
 
 the relation of the external reference to the object it was pointed from

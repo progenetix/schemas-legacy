@@ -61,8 +61,10 @@ This value may reflect either the place of burth or residence, but frequently ma
 </tr>
 </table>
 
-### Extended notes and examples on the _ properties
+<h3>Extended notes and examples on the <i>Individual</i> properties</h3>
 
+
+--------------------------------------------------------------------------------
 ### biocharacteristics
 
 list of biocharacteristic_class objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and "systemic" phenotypes and diseases
@@ -102,16 +104,14 @@ the query will return all individuals who have been properly labeled as human
 db.individual.find( { "biocharacteristics.class.id" : "NCBITaxon:9606" } )
 ```
 
-------
-
 
 this call to the distinct funcion will return *all* HPO annotated classes
 ```
 db.biosamples.distinct( { "biocharacteristics.class.id", "biocharacteristics.class.id" : { $regex : /HP\:/i } } )
 ```
 
-------
 
+--------------------------------------------------------------------------------
 ### description
 
 A free text description of the individual.
@@ -121,6 +121,8 @@ A free text description of the individual.
 ```
 'description' : "patient with lung cancer, male smoker"
 ```
+
+--------------------------------------------------------------------------------
 ### geo_provenance
 
 This geo_class attribute ideally describes the geographic location of where this individual originates from.
@@ -131,14 +133,16 @@ This value may reflect either the place of burth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'altitude' : 94,
-  'country' : 'Romania',
   'longitude' : 21.23,
+  'altitude' : 94,
   'latitude' : 45.75,
-  'city' : 'Timisoara'
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
+  'city' : 'Timisoara',
+  'country' : 'Romania'
 }
 ```
+
+--------------------------------------------------------------------------------
 ### id
 
 The local-unique identifier of this individual (referenced as "individual_id").
@@ -148,6 +152,8 @@ The local-unique identifier of this individual (referenced as "individual_id").
 ```
 'id' : "AM_BS__NCBISKYCGH-1993"
 ```
+
+--------------------------------------------------------------------------------
 ### info
 
 additional variant information, as defined in the example and accompanying documentation
@@ -156,16 +162,18 @@ additional variant information, as defined in the example and accompanying docum
 
 ```
 'info' : {
-  'last_name' : {
-                   'type' : 'string',
-                   'value' : 'Tichy'
-                 },
   'first_name' : {
                     'type' : 'string',
                     'value' : 'Ion'
-                  }
+                  },
+  'last_name' : {
+                   'type' : 'string',
+                   'value' : 'Tichy'
+                 }
 }
 ```
+
+--------------------------------------------------------------------------------
 ### updated
 
 time of the last edit of this record, in ISO8601

@@ -94,6 +94,8 @@ END
 </tr>
 END
         $prop_md    .=  <<END;
+
+--------------------------------------------------------------------------------
 ### $property
 
 $attr{$class}->{properties}->{$property}->{description}
@@ -116,8 +118,6 @@ $query->{description}
 $query->{query}
 ```
 
-------
-
 END
 
       }}}
@@ -125,7 +125,7 @@ END
       $class_md .=  <<END;
 </table>
 
-### Extended notes and examples on the _$class_ properties
+<h3>Extended notes and examples on the <i>$class</i> properties</h3>
 
 END
       $markdown .=  $class_md;    
