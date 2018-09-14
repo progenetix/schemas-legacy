@@ -5,6 +5,8 @@ Definition of some prototype objects which are re-used in other schema documents
 
 ## Biocharacteristic_class
 
+### Properties of the _ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -12,7 +14,6 @@ Definition of some prototype objects which are re-used in other schema documents
   <th>Format</th>
   <th>Description</th>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>class</td>
@@ -20,7 +21,6 @@ Definition of some prototype objects which are re-used in other schema documents
   <td></td>
   <td>an ontology_class object</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>description</td>
@@ -28,7 +28,6 @@ Definition of some prototype objects which are re-used in other schema documents
   <td></td>
   <td>a free-text description of this biocharacteristic</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>negated</td>
@@ -72,6 +71,8 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
 ```
 ## Geo_class
 
+### Properties of the _ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -79,7 +80,6 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <th>Format</th>
   <th>Description</th>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>altitude</td>
@@ -87,7 +87,6 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <td>float</td>
   <td>height in meters above the WGS 84 reference ellipsoid; otional</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>city</td>
@@ -95,7 +94,6 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <td></td>
   <td></td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>country</td>
@@ -103,7 +101,6 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <td></td>
   <td></td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>label</td>
@@ -114,7 +111,6 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   - provide a sanity check for latitude,longitude values
 </td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>latitude</td>
@@ -122,7 +118,6 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <td></td>
   <td>signed decimal degrees (North, relative to Equator)</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>longitude</td>
@@ -193,6 +188,8 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
 ```
 ## Info_class
 
+### Properties of the _ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -200,7 +197,6 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <th>Format</th>
   <th>Description</th>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>description</td>
@@ -208,7 +204,6 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <td></td>
   <td>an optional free-text annotation about the object</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>format</td>
@@ -216,7 +211,6 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <td></td>
   <td>format of the value; optional</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>type</td>
@@ -224,7 +218,6 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <td></td>
   <td>type of the value; optional</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>value</td>
@@ -274,6 +267,8 @@ the value in a format correstponding to type
 ```
 ## Ontology_class
 
+### Properties of the _ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -281,7 +276,6 @@ the value in a format correstponding to type
   <th>Format</th>
   <th>Description</th>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>id</td>
@@ -289,7 +283,6 @@ the value in a format correstponding to type
   <td></td>
   <td>properly prefixed CURIE of the ontology term</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>label</td>
@@ -321,6 +314,8 @@ the text label associated with the term
 ```
 ## Reference_class
 
+### Properties of the _ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -328,7 +323,6 @@ the text label associated with the term
   <th>Format</th>
   <th>Description</th>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>id</td>
@@ -336,7 +330,6 @@ the text label associated with the term
   <td></td>
   <td>properly prefixed CURIE of the external reference</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>relation</td>

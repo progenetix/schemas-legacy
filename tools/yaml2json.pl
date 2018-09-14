@@ -66,6 +66,8 @@ END
       my $class_md  =  <<END;
 ## $class
 
+### Properties of the _$class_ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -83,7 +85,6 @@ END
       
         my $md_example  =   _reformat_example($attr{$class}->{properties}->{$property}->{example});
         $class_md   .=  <<END;
-### Properties of the _$class_ class
 
 <tr>
   <td>$property</td>

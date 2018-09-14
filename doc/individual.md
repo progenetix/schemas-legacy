@@ -5,6 +5,8 @@ An individual is a single organism (here typically a human).
 
 ## Individual
 
+### Properties of the _ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -12,7 +14,6 @@ An individual is a single organism (here typically a human).
   <th>Format</th>
   <th>Description</th>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>biocharacteristics</td>
@@ -21,7 +22,6 @@ An individual is a single organism (here typically a human).
   <td>list of biocharacteristic_class objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and "systemic" phenotypes and diseases
 </td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>description</td>
@@ -29,7 +29,6 @@ An individual is a single organism (here typically a human).
   <td></td>
   <td>A free text description of the individual.</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>geo_provenance</td>
@@ -39,7 +38,6 @@ An individual is a single organism (here typically a human).
 This value may reflect either the place of burth or residence, but frequently may correspond to the place the study was performed.
 </td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>id</td>
@@ -47,7 +45,6 @@ This value may reflect either the place of burth or residence, but frequently ma
   <td></td>
   <td>The local-unique identifier of this individual (referenced as "individual_id").</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>info</td>
@@ -55,7 +52,6 @@ This value may reflect either the place of burth or residence, but frequently ma
   <td></td>
   <td>additional variant information, as defined in the example and accompanying documentation</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>updated</td>
@@ -77,17 +73,17 @@ list of biocharacteristic_class objects with properly prefixed term ids, describ
 ```
 'biocharacteristics' : [
   {
-    'description' : 'girl',
     'class' : {
                  'label' : 'female genetic sex',
                  'id' : 'PATO:0020000'
-               }
+               },
+    'description' : 'girl'
   },
   {
     'description' : 'Jean-Luc Picard',
     'class' : {
-                 'id' : 'NCBITaxon:9606',
-                 'label' : 'Homo sapiens'
+                 'label' : 'Homo sapiens',
+                 'id' : 'NCBITaxon:9606'
                }
   },
   {
@@ -135,9 +131,9 @@ This value may reflect either the place of burth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
+  'city' : 'Timisoara',
   'country' : 'Romania',
   'altitude' : 94,
-  'city' : 'Timisoara',
   'latitude' : 45.75,
   'longitude' : 21.23,
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
@@ -161,8 +157,8 @@ additional variant information, as defined in the example and accompanying docum
 ```
 'info' : {
   'first_name' : {
-                    'type' : 'string',
-                    'value' : 'Ion'
+                    'value' : 'Ion',
+                    'type' : 'string'
                   },
   'last_name' : {
                    'value' : 'Tichy',

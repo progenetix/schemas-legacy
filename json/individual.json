@@ -1,44 +1,32 @@
 {
+   "info" : {
+      "title" : "GA4GH __individual__\n",
+      "updated" : "2018-09-13",
+      "description" : "An individual is a single organism (here typically a human).\n"
+   },
    "definitions" : {
       "Individual" : {
          "properties" : {
-            "description" : {
-               "description" : "A free text description of the individual.",
-               "type" : "string",
-               "example" : "patient with lung cancer, male smoker"
-            },
-            "info" : {
-               "description" : "additional variant information, as defined in the example and accompanying documentation",
-               "schema" : {
-                  "$ref" : "./common/Info_class"
-               },
-               "example" : {
-                  "first_name" : {
-                     "type" : "string",
-                     "value" : "Ion"
-                  },
-                  "last_name" : {
-                     "value" : "Tichy",
-                     "type" : "string"
-                  }
-               }
-            },
             "id" : {
                "type" : "string",
                "example" : "AM_BS__NCBISKYCGH-1993",
                "description" : "The local-unique identifier of this individual (referenced as \"individual_id\")."
             },
-            "updated" : {
-               "description" : "time of the last edit of this record, in ISO8601",
-               "type" : "string",
-               "example" : "2017-10-25T07:06:03Z"
+            "geo_provenance" : {
+               "example" : {
+                  "city" : "Timisoara",
+                  "country" : "Romania",
+                  "altitude" : "94",
+                  "latitude" : "45.75",
+                  "longitude" : "21.23",
+                  "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
+               },
+               "schema" : {
+                  "$ref" : "./common/Geo_class"
+               },
+               "description" : "This geo_class attribute ideally describes the geographic location of where this individual originates from.\nThis value may reflect either the place of burth or residence, but frequently may correspond to the place the study was performed.\n"
             },
             "biocharacteristics" : {
-               "description" : "list of biocharacteristic_class objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and \"systemic\" phenotypes and diseases\n",
-               "schema" : {
-                  "$ref" : "#/Biocharacteristic_class"
-               },
-               "type" : "array",
                "queries" : [
                   {
                      "query" : "db.individual.find( { \"biocharacteristics.class.id\" : \"NCBITaxon:9606\" } )",
@@ -49,19 +37,23 @@
                      "description" : "this call to the distinct funcion will return *all* HPO annotated classes"
                   }
                ],
+               "schema" : {
+                  "$ref" : "#/Biocharacteristic_class"
+               },
+               "description" : "list of biocharacteristic_class objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and \"systemic\" phenotypes and diseases\n",
                "example" : [
                   {
-                     "description" : "girl",
                      "class" : {
                         "label" : "female genetic sex",
                         "id" : "PATO:0020000"
-                     }
+                     },
+                     "description" : "girl"
                   },
                   {
                      "description" : "Jean-Luc Picard",
                      "class" : {
-                        "id" : "NCBITaxon:9606",
-                        "label" : "Homo sapiens"
+                        "label" : "Homo sapiens",
+                        "id" : "NCBITaxon:9606"
                      }
                   },
                   {
@@ -71,29 +63,37 @@
                      },
                      "description" : "Patient with Down syndrome"
                   }
-               ]
+               ],
+               "type" : "array"
             },
-            "geo_provenance" : {
-               "description" : "This geo_class attribute ideally describes the geographic location of where this individual originates from.\nThis value may reflect either the place of burth or residence, but frequently may correspond to the place the study was performed.\n",
+            "info" : {
                "schema" : {
-                  "$ref" : "./common/Geo_class"
+                  "$ref" : "./common/Info_class"
                },
+               "description" : "additional variant information, as defined in the example and accompanying documentation",
                "example" : {
-                  "country" : "Romania",
-                  "altitude" : "94",
-                  "city" : "Timisoara",
-                  "latitude" : "45.75",
-                  "longitude" : "21.23",
-                  "label" : "Str Marasesti 5, 300077 Timisoara, Romania"
+                  "first_name" : {
+                     "value" : "Ion",
+                     "type" : "string"
+                  },
+                  "last_name" : {
+                     "value" : "Tichy",
+                     "type" : "string"
+                  }
                }
+            },
+            "updated" : {
+               "example" : "2017-10-25T07:06:03Z",
+               "type" : "string",
+               "description" : "time of the last edit of this record, in ISO8601"
+            },
+            "description" : {
+               "type" : "string",
+               "example" : "patient with lung cancer, male smoker",
+               "description" : "A free text description of the individual."
             }
          }
       }
-   },
-   "info" : {
-      "description" : "An individual is a single organism (here typically a human).\n",
-      "updated" : "2018-09-13",
-      "title" : "GA4GH __individual__\n"
    }
 }
 

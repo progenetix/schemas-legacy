@@ -5,6 +5,8 @@ The document describes attributes of the "variant" object, which e.g. can be ins
 
 ## Variant
 
+### Properties of the _ class
+
 <table>
 <tr>
   <th>Property</th>
@@ -12,7 +14,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <th>Format</th>
   <th>Description</th>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>alternate_bases</td>
@@ -20,7 +21,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>one or more bases relative to start position of the reference genome,replacing the reference_bases value; for precise variants</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>biosample_id</td>
@@ -28,7 +28,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>callset_id</td>
@@ -36,7 +35,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>The identifier ("callset.id") of the callset this variant is part of.</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>digest</td>
@@ -44,7 +42,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>concatenated unique specific elements of the variant</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>end</td>
@@ -52,7 +49,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td>int64</td>
   <td>array of 0 (for presise sequence variants), 1 or 2 (for imprecise end position of structural variant) integers</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>genotype</td>
@@ -60,7 +56,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>list of strings, which represent the (phased) alleles in which the variant was being observed</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>info</td>
@@ -68,7 +63,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>additional variant information, as defined in the example and accompanying documentation</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>mate_name</td>
@@ -76,7 +70,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>Mate name (chromosome) for fusion (BRK) events; otherwise left empty. Accepting values 1-22, X, Y.</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>reference_bases</td>
@@ -84,7 +77,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>one or more bases at start position in the reference genome, which have been replaced by the alternate_bases value; for precise variants</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>reference_name</td>
@@ -92,7 +84,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>Reference name (chromosome). Accepting values 1-22, X, Y.</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>start</td>
@@ -100,7 +91,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td>int64</td>
   <td>array of 1 or 2 (for imprecise end position of structural variant) integers</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>updated</td>
@@ -108,7 +98,6 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td></td>
   <td>time of the last edit of this record, in ISO8601</td>
 </tr>
-### Properties of the _ class
 
 <tr>
   <td>variant_type</td>
@@ -199,8 +188,8 @@ additional variant information, as defined in the example and accompanying docum
 'info' : {
   'cnv_value' : {
                    'value' : '-0.294',
-                   'type' : 'number',
-                   'format' : 'float'
+                   'format' : 'float',
+                   'type' : 'number'
                  },
   'cnv_length' : {
                     'value' : 1205290,
