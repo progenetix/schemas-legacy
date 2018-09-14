@@ -40,7 +40,9 @@ The callset object contains information about an experiment performed on materia
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### biosample_id
+</tr></table>
+
+### biosample_id
 
 The identifier ("biosample.id") of the biosample this variant was reported from. This is a shortcut to using the variant -> callset -> biosample chaining.
 
@@ -67,11 +69,11 @@ This geo_class attribute ideally describes the geographic location of where this
 
 ```
 'geo_provenance' : {
-  'latitude' : 45.75,
-  'country' : 'Romania',
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'longitude' : 21.23,
-  'city' : 'Timisoara'
+  'latitude' : 45.75,
+  'city' : 'Timisoara',
+  'country' : 'Romania',
+  'longitude' : 21.23
 }
 ```
 ### id
@@ -92,11 +94,14 @@ additional variant information, as defined in the example and accompanying docum
 ```
 'info' : {
   'cnv_maps' : {
+                  'schema' : {
+                                '$ref' : './common/Info_class'
+                              },
                   'value' : {
                                'dup_map' : {
+                                              'type' : 'array',
                                               'description' : 'gain cnv status for the corresponding genome intervals
 ',
-                                              'type' : 'array',
                                               'value' : [
                                                            '',
                                                            '',
@@ -112,15 +117,12 @@ additional variant information, as defined in the example and accompanying docum
                                                          ]
                                             },
                                'binning' : {
+                                              'type' : 'number',
                                               'value' : 1000000,
                                               'description' : 'interval size in bases for the binning, when creating the cnv_maps',
-                                              'type' : 'number',
                                               'format' : 'int64'
                                             }
                              },
-                  'schema' : {
-                                '$ref' : './common/Info_class'
-                              },
                   'description' : 'The cnv_maps object is a wrapper for genomic interval mapped status information. In Progenetix and arrayMap, this is used to indictate - for fixed 1MB genome intervals - the status (dup_map => "DUP" or "", del_map => "DEL" or ""), or the maximum / minimum positive / negative value encountered in the segment, as far as it has been called to contain DUP or DEL.
 With a standard binning of 1MB, the arrays would contain ~3000 values each (depending on genome edition).
 '

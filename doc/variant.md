@@ -76,7 +76,9 @@ The document describes attributes of the "variant" object, which e.g. can be ins
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### alternate_bases
+</tr></table>
+
+### alternate_bases
 
 one or more bases relative to start position of the reference genome,replacing the reference_bases value; for precise variants
 
@@ -151,14 +153,14 @@ additional variant information, as defined in the example and accompanying docum
 ```
 'info' : {
   'cnv_length' : {
-                    'value' : 1205290,
                     'format' : 'int64',
+                    'value' : 1205290,
                     'type' : 'number'
                   },
   'cnv_value' : {
                    'type' : 'number',
-                   'format' : 'float',
-                   'value' : '-0.294'
+                   'value' : '-0.294',
+                   'format' : 'float'
                  }
 }
 ```

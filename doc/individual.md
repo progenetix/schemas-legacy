@@ -41,7 +41,9 @@ An individual is a single organism (here typically a human).
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### biocharacteristics
+</tr></table>
+
+### biocharacteristics
 
 list of biocharacteristic_class objects with properly prefixed term ids, describing features of the individual which are not specific to the reported biosample(s); typical examples here are sex, species and "systemic" phenotypes and diseases
 
@@ -65,11 +67,11 @@ list of biocharacteristic_class objects with properly prefixed term ids, describ
     'description' : 'Jean-Luc Picard'
   },
   {
-    'description' : 'Patient with Down syndrome',
     'class' : {
-                 'id' : 'HP:0003745',
-                 'label' : 'Genetic anticipation'
-               }
+                 'label' : 'Genetic anticipation',
+                 'id' : 'HP:0003745'
+               },
+    'description' : 'Patient with Down syndrome'
   }
 ]
 ```
@@ -103,12 +105,12 @@ This value may reflect either the place of burth or residence, but frequently ma
 
 ```
 'geo_provenance' : {
-  'longitude' : 21.23,
-  'country' : 'Romania',
-  'latitude' : 45.75,
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
   'city' : 'Timisoara',
-  'altitude' : 94
+  'latitude' : 45.75,
+  'country' : 'Romania',
+  'altitude' : 94,
+  'longitude' : 21.23,
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
 }
 ```
 ### id

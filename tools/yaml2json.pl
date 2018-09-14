@@ -112,7 +112,11 @@ $query->{query}
 END
 
       }}}
-       
+      
+      $class_md .=  <<END;
+</table>
+
+END
       $markdown .=  $class_md;    
       $markdown .=  $prop_md;
 

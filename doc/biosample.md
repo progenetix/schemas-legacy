@@ -60,7 +60,9 @@ In this schema, a "biosample" as the source of the material of a molecular analy
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### age_at_collection
+</tr></table>
+
+### age_at_collection
 
 the age of the individual at time of biosample collection, as ISO8601 string
 
@@ -92,18 +94,18 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
+    'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
-                 'id' : 'pgx:icdot:c25.9',
-                 'label' : 'Pancreas, NOS'
-               },
-    'description' : 'Pancreatic Adenocarcinoma'
+                 'label' : 'Pancreas, NOS',
+                 'id' : 'pgx:icdot:c25.9'
+               }
   },
   {
+    'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
-                 'label' : 'Adenocarcinoma, NOS',
-                 'id' : 'pgx:icdom:81403'
-               },
-    'description' : 'Pancreatic Adenocarcinoma'
+                 'id' : 'pgx:icdom:81403',
+                 'label' : 'Adenocarcinoma, NOS'
+               }
   },
   {
     'description' : 'Pancreatic Adenocarcinoma',
@@ -145,16 +147,16 @@ list of reference_class objects with properly (e.g. identifiers.org) prefixed ex
 ```
 'external_ids' : [
   {
-    'id' : 'cellosaurus:CVCL_0312',
-    'relation' : 'provenance'
+    'relation' : 'provenance',
+    'id' : 'cellosaurus:CVCL_0312'
   },
   {
     'relation' : 'report',
     'id' : 'pubmed:17440070'
   },
   {
-    'id' : 'geo:GPL4894',
-    'relation' : 'technology'
+    'relation' : 'technology',
+    'id' : 'geo:GPL4894'
   },
   {
     'id' : 'geo:GSM185088',
@@ -178,12 +180,12 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
-  'latitude' : 45.75,
-  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
   'country' : 'Romania',
-  'longitude' : 21.23,
   'altitude' : 94,
-  'city' : 'Timisoara'
+  'longitude' : 21.23,
+  'city' : 'Timisoara',
+  'latitude' : 45.75,
+  'label' : 'Str Marasesti 5, 300077 Timisoara, Romania'
 }
 ```
 ### id

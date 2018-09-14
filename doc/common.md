@@ -26,7 +26,9 @@ Definition of some prototype objects which are re-used in other schema documents
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### class
+</tr></table>
+
+### class
 
 an ontology_class object
 
@@ -34,8 +36,8 @@ an ontology_class object
 
 ```
 'class' : {
-  'id' : 'ncit:c8294',
-  'label' : 'Pancreatic Adenocarcinoma'
+  'label' : 'Pancreatic Adenocarcinoma',
+  'id' : 'ncit:c8294'
 }
 ```
 ### description
@@ -94,7 +96,9 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### altitude
+</tr></table>
+
+### altitude
 
 height in meters above the WGS 84 reference ellipsoid; otional
 
@@ -179,7 +183,9 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### description
+</tr></table>
+
+### description
 
 an optional free-text annotation about the object
 
@@ -233,7 +239,9 @@ the value in a format correstponding to type
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### id
+</tr></table>
+
+### id
 
 properly prefixed CURIE of the ontology term
 
@@ -269,7 +277,9 @@ the text label associated with the term
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
-</tr>### id
+</tr></table>
+
+### id
 
 properly prefixed CURIE of the external reference
 
