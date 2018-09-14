@@ -7,24 +7,28 @@ Definition of some prototype objects which are re-used in other schema documents
 
 <table>
 <tr>
-  <th>property</th>
-  <th>type</th>
-  <th>format</th>
+  <th>Property</th>
+  <th>Type</th>
+  <th>Format</th>
+  <th>Description</th>
 </tr>
 <tr>
   <td>class</td>
   <td></td>
   <td></td>
+  <td>an ontology_class object</td>
 </tr>
 <tr>
   <td>description</td>
   <td>string</td>
   <td></td>
+  <td>a free-text description of this biocharacteristic</td>
 </tr>
 <tr>
   <td>negated</td>
   <td>boolean</td>
   <td></td>
+  <td>flag for negating this biocharacteristic_class object; a "false" is assumed as default and does not have to be stated</td>
 </tr>
 </table>
 
@@ -36,8 +40,8 @@ an ontology_class object
 
 ```
 'class' : {
-  'label' : 'Pancreatic Adenocarcinoma',
-  'id' : 'ncit:c8294'
+  'id' : 'ncit:c8294',
+  'label' : 'Pancreatic Adenocarcinoma'
 }
 ```
 ### description
@@ -62,39 +66,49 @@ flag for negating this biocharacteristic_class object; a "false" is assumed as d
 
 <table>
 <tr>
-  <th>property</th>
-  <th>type</th>
-  <th>format</th>
+  <th>Property</th>
+  <th>Type</th>
+  <th>Format</th>
+  <th>Description</th>
 </tr>
 <tr>
   <td>altitude</td>
   <td>number</td>
   <td>float</td>
+  <td>height in meters above the WGS 84 reference ellipsoid; otional</td>
 </tr>
 <tr>
   <td>city</td>
   <td>string</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>country</td>
   <td>string</td>
   <td></td>
+  <td></td>
 </tr>
 <tr>
   <td>label</td>
   <td>string</td>
   <td></td>
+  <td>A text representation, preferably using standard geographic identification elements, of the corresponding latitude,longitude(,altitude). This representation serves the purposes to
+  - capture standard data entry parameters
+  - provide a sanity check for latitude,longitude values
+</td>
 </tr>
 <tr>
   <td>latitude</td>
   <td>number</td>
   <td></td>
+  <td>signed decimal degrees (North, relative to Equator)</td>
 </tr>
 <tr>
   <td>longitude</td>
   <td>number</td>
   <td>float</td>
+  <td>signed decimal degrees (East, relative to IERS Reference Meridian)</td>
 </tr>
 </table>
 
@@ -159,29 +173,34 @@ signed decimal degrees (East, relative to IERS Reference Meridian)
 
 <table>
 <tr>
-  <th>property</th>
-  <th>type</th>
-  <th>format</th>
+  <th>Property</th>
+  <th>Type</th>
+  <th>Format</th>
+  <th>Description</th>
 </tr>
 <tr>
   <td>description</td>
   <td>string</td>
   <td></td>
+  <td>an optional free-text annotation about the object</td>
 </tr>
 <tr>
   <td>format</td>
   <td>string</td>
   <td></td>
+  <td>format of the value; optional</td>
 </tr>
 <tr>
   <td>type</td>
   <td>string</td>
   <td></td>
+  <td>type of the value; optional</td>
 </tr>
 <tr>
   <td>value</td>
   <td></td>
   <td></td>
+  <td>the value in a format correstponding to type</td>
 </tr>
 </table>
 
@@ -225,19 +244,22 @@ the value in a format correstponding to type
 
 <table>
 <tr>
-  <th>property</th>
-  <th>type</th>
-  <th>format</th>
+  <th>Property</th>
+  <th>Type</th>
+  <th>Format</th>
+  <th>Description</th>
 </tr>
 <tr>
   <td>id</td>
   <td>string</td>
   <td></td>
+  <td>properly prefixed CURIE of the ontology term</td>
 </tr>
 <tr>
   <td>label</td>
   <td>string</td>
   <td></td>
+  <td>the text label associated with the term</td>
 </tr>
 </table>
 
@@ -263,19 +285,22 @@ the text label associated with the term
 
 <table>
 <tr>
-  <th>property</th>
-  <th>type</th>
-  <th>format</th>
+  <th>Property</th>
+  <th>Type</th>
+  <th>Format</th>
+  <th>Description</th>
 </tr>
 <tr>
   <td>id</td>
   <td>string</td>
   <td></td>
+  <td>properly prefixed CURIE of the external reference</td>
 </tr>
 <tr>
   <td>relation</td>
   <td>string</td>
   <td></td>
+  <td>the relation of the external reference to the object it was pointed from</td>
 </tr>
 </table>
 

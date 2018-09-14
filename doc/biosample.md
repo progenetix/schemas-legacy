@@ -6,59 +6,76 @@ In this schema, a "biosample" as the source of the material of a molecular analy
 
 <table>
 <tr>
-  <th>property</th>
-  <th>type</th>
-  <th>format</th>
+  <th>Property</th>
+  <th>Type</th>
+  <th>Format</th>
+  <th>Description</th>
 </tr>
 <tr>
   <td>age_at_collection</td>
   <td>string</td>
   <td></td>
+  <td>the age of the individual at time of biosample collection, as ISO8601 string</td>
 </tr>
 <tr>
   <td>age_at_collection_class</td>
   <td></td>
   <td></td>
+  <td>the age of the individual at time of biosample collection, as ontology object</td>
 </tr>
 <tr>
   <td>biocharacteristics</td>
   <td>array</td>
   <td></td>
+  <td>"biocharacteristics" represents a wrapper list of "biocharacteristic_class" objects with properly prefixed term ids, describing features of the biosample.
+Examples would be phenotypes, disease codes or other ontology classes specific to this biosample. In a complete data model (variants - (callsets) - biosamples - individuals), characteristics applying to the individual (e.g. sex, most phenotypes) should be annotated there.
+</td>
 </tr>
 <tr>
   <td>description</td>
   <td>string</td>
   <td></td>
+  <td>A free text description of the biosample.</td>
 </tr>
 <tr>
   <td>external_ids</td>
   <td>array</td>
   <td></td>
+  <td>list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship</td>
 </tr>
 <tr>
   <td>geo_provenance</td>
   <td></td>
   <td></td>
+  <td>This geo_class attribute ideally describes the geographic location of where the sample was extracted.
+Frequently this value may reflect either the place of the laboratory where the analysis was performed, or correspond to the corresponding author's institution.
+</td>
 </tr>
 <tr>
   <td>id</td>
   <td>string</td>
   <td></td>
+  <td>The local-unique identifier of this biosample (referenced as "biosample_id").</td>
 </tr>
 <tr>
   <td>individual_id</td>
   <td>string</td>
   <td></td>
+  <td>In a complete data model "individual_id" represents the identifier of this biosample in the "individuals" collection.
+</td>
 </tr>
 <tr>
   <td>info</td>
   <td></td>
   <td></td>
+  <td>This is a wrapper for objects without further specification in the schema.
+</td>
 </tr>
 <tr>
   <td>updated</td>
   <td>string</td>
   <td></td>
+  <td>time of the last edit of this record, in ISO8601</td>
 </tr>
 </table>
 
@@ -79,8 +96,8 @@ the age of the individual at time of biosample collection, as ontology object
 
 ```
 'age_at_collection_class' : {
-  'id' : 'HP:0003621',
-  'label' : 'Juvenile onset'
+  'label' : 'Juvenile onset',
+  'id' : 'HP:0003621'
 }
 ```
 ### biocharacteristics
@@ -94,23 +111,23 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 'biocharacteristics' : [
   {
-    'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
-                 'id' : 'pgx:icdot:c25.9',
-                 'label' : 'Pancreas, NOS'
-               }
+                 'label' : 'Pancreas, NOS',
+                 'id' : 'pgx:icdot:c25.9'
+               },
+    'description' : 'Pancreatic Adenocarcinoma'
   },
   {
     'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
-                 'label' : 'Adenocarcinoma, NOS',
-                 'id' : 'pgx:icdom:81403'
+                 'id' : 'pgx:icdom:81403',
+                 'label' : 'Adenocarcinoma, NOS'
                }
   },
   {
     'class' : {
-                 'id' : 'ncit:c8294',
-                 'label' : 'Pancreatic Adenocarcinoma'
+                 'label' : 'Pancreatic Adenocarcinoma',
+                 'id' : 'ncit:c8294'
                },
     'description' : 'Pancreatic Adenocarcinoma'
   }
@@ -147,16 +164,16 @@ list of reference_class objects with properly (e.g. identifiers.org) prefixed ex
 ```
 'external_ids' : [
   {
-    'relation' : 'provenance',
-    'id' : 'cellosaurus:CVCL_0312'
+    'id' : 'cellosaurus:CVCL_0312',
+    'relation' : 'provenance'
   },
   {
-    'id' : 'pubmed:17440070',
-    'relation' : 'report'
+    'relation' : 'report',
+    'id' : 'pubmed:17440070'
   },
   {
-    'id' : 'geo:GPL4894',
-    'relation' : 'technology'
+    'relation' : 'technology',
+    'id' : 'geo:GPL4894'
   },
   {
     'relation' : 'denotes',
@@ -180,12 +197,12 @@ Frequently this value may reflect either the place of the laboratory where the a
 
 ```
 'geo_provenance' : {
-  'longitude' : 21.23,
-  'latitude' : 45.75,
-  'altitude' : 94,
-  'country' : 'Romania',
   'label' : 'Str Marasesti 5, 300077 Timisoara, Romania',
-  'city' : 'Timisoara'
+  'altitude' : 94,
+  'longitude' : 21.23,
+  'city' : 'Timisoara',
+  'latitude' : 45.75,
+  'country' : 'Romania'
 }
 ```
 ### id
@@ -217,8 +234,8 @@ This is a wrapper for objects without further specification in the schema.
 ```
 'info' : {
   'death' : {
-               'value' : 1,
-               'type' : 'boolean'
+               'type' : 'boolean',
+               'value' : 1
              },
   'followup_time' : {
                        'value' : 'P14M',

@@ -68,9 +68,10 @@ END
 
 <table>
 <tr>
-  <th>property</th>
-  <th>type</th>
-  <th>format</th>
+  <th>Property</th>
+  <th>Type</th>
+  <th>Format</th>
+  <th>Description</th>
 </tr>
 END
       my $prop_md;
@@ -86,6 +87,7 @@ END
   <td>$property</td>
   <td>$attr{$class}->{properties}->{$property}->{type}</td>
   <td>$attr{$class}->{properties}->{$property}->{format}</td>
+  <td>$attr{$class}->{properties}->{$property}->{description}</td>
 </tr>
 END
         $prop_md    .=  <<END;
