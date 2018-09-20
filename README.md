@@ -9,17 +9,17 @@ A graph showing the basic objects and their relationships. The example attribute
 
 This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org) project.
 
-The primary documents are in the [yaml](./yaml/) directory, with JSON versions and examples extracted from them. The "readable" documentation is also created from the YAML files and can be accessed here:
+The primary documents are in the [yaml](./main/yaml/) directory, with JSON versions and examples extracted from them. The "readable" documentation is also created from the YAML files and can be accessed here:
 
-* [common](./doc/common.md)
+* [common](./main/doc/common.md)
     object classes, which are used in the schemas themselves
-* [variant](./doc/variant.md)
+* [variant](./main/doc/variant.md)
     The `variant` object includes attributes and examples for both structural (DUP, DEL, BRK) and precise genome variants.
-* [callset](./doc/callset.md)
+* [callset](./main/doc/callset.md)
     The `callset` object is for technoical data and series information (e.g. used platform and analysis metods). It is not strictly needed for querying combined variant + biosample aspects, since in the current implementation the `variant` object contains a reference to the `biosample` it was derived from.
-* [biosample](./doc/biosample.md)
+* [biosample](./main/doc/biosample.md)
     Most relevant "bio"data (such as diagnoses, phenotypes ...) is stored in the `biosample` object.
-* [individual](./doc/individual.md)
+* [individual](./main/doc/individual.md)
     The `individual` object contains information which pertains to the whole biological entity biosamples are derived from (e.g. sex, heritable phenotypes...).
     
 
