@@ -2,11 +2,15 @@ info:
   title: |
     GA4GH __variant__
   description: |
-    The document describes attributes of the "variant" object, which e.g. can be instantiated as database documents in a MongoDB collection.
-  updated: '2018-09-13'
+    The document describes attributes of the _variant_ object. In its current implementation, _valiant_ (and related genomic objects such as _callset_) represent extended versions of the original, VCF-derived GA4GH schema. This format may be superseeded or augmented based on current developments in the GA4GH::GKS work stream.
+  updated: '2018-09-14'
 definitions:
   Variant:
     properties:
+      id:
+        description: The local-unique identifier of this variant (referenced as "variant_id").
+        type: string
+        example: 'amvar-8754-7751-1119-8539'
       digest:
         description: concatenated unique specific elements of the variant
         type: string
@@ -56,8 +60,8 @@ definitions:
           - '1'
           - '.'
       variant_type:
-        description: the variant type in case of a named (structural) variant (DUP | DEL | BRK ...)
-        type: string       
+        description: the variant type in case of a named (structural) variant (e.g. DUP, DEL, BRK ...)
+        type: string
         example: 'DEL'
       info:
         description: additional variant information, as defined in the example and accompanying documentation
@@ -72,7 +76,13 @@ definitions:
             type: number
             format: int64
             value: 1205290
-      updated:
-        description: time of the last edit of this record, in ISO8601
+      created:
+        description: |
+          The creation time of this record, in ISO8601
         type: string
         example: '2017-10-25T07:06:03Z'
+      updated:
+        description: |
+          The time of the last edit of this record, in ISO8601
+        type: string
+        example: '2022-11-11T09:45:13Z'
