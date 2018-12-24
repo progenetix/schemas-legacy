@@ -58,7 +58,7 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
   </tr>
 
   <tr>
-    <td>external_ids</td>
+    <td>external_references</td>
     <td>array</td>
     <td></td>
     <td>list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship</td>
@@ -158,20 +158,20 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
     'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
                  'label' : 'Pancreas, NOS',
-                 'id' : 'pgx:icdot:c25.9'
+                 'id' : 'icdot:C25.9'
                }
   },
   {
     'description' : 'Pancreatic Adenocarcinoma',
     'class' : {
                  'label' : 'Adenocarcinoma, NOS',
-                 'id' : 'pgx:icdom:81403'
+                 'id' : 'icdom:81403'
                }
   },
   {
     'class' : {
                  'label' : 'Pancreatic Adenocarcinoma',
-                 'id' : 'ncit:c8294'
+                 'id' : 'ncit:C8294'
                },
     'description' : 'Pancreatic Adenocarcinoma'
   }
@@ -179,10 +179,10 @@ Examples would be phenotypes, disease codes or other ontology classes specific t
 ```
 
 #### Queries:
-The query will return all biosamples with an (exact) class.id of "pgx:icdom:81403" in their "biocharacteristics" object list.
+The query will return all biosamples with an (exact) class.id of "icdom:81403" in their "biocharacteristics" object list.
 
 ```
-db.biosamples.find( { "biocharacteristics.class.id" : "pgx:icdom:81403" } )
+db.biosamples.find( { "biocharacteristics.class.id" : "icdom:81403" } )
 ```
 
 
@@ -232,14 +232,14 @@ A free text description of the biosample.
 ```
 
 --------------------------------------------------------------------------------
-### external_ids
+### external_references
 
 list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship
 
 #### Example
 
 ```
-'external_ids' : [
+'external_references' : [
   {
     'relation' : 'provenance',
     'id' : 'cellosaurus:CVCL_0312'
@@ -262,7 +262,7 @@ list of reference_class objects with properly (e.g. identifiers.org) prefixed ex
 #### Queries:
 the query will return all biosamples reported in this publication
 ```
-db.biosamples.find( { "external_ids.id" : "pubmed:17440070" } )
+db.biosamples.find( { "external_references.id" : "pubmed:17440070" } )
 ```
 
 

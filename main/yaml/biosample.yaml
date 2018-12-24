@@ -43,7 +43,7 @@ definitions:
           $ref: './common/Age_class'
         description: |
           The age of the individual at time of biosample collection, as Age_class object.
-        example: 
+        example:
           age: 'P56Y'
           age_class:
             id : "HP:0003621"
@@ -58,24 +58,24 @@ definitions:
         example:
           - description: "Pancreatic Adenocarcinoma"
             class :
-              id : "pgx:icdot:c25.9"
+              id : "icdot:C25.9"
               label : "Pancreas, NOS"
           - description : "Pancreatic Adenocarcinoma"
             class:
-              id : "pgx:icdom:81403"
+              id : "icdom:81403"
               label : "Adenocarcinoma, NOS"
           - description : "Pancreatic Adenocarcinoma"
             class :
-              id : "ncit:c8294"
+              id : "ncit:C8294"
               label : "Pancreatic Adenocarcinoma"
         queries:
-          - query: 'db.biosamples.find( { "biocharacteristics.class.id" : "pgx:icdom:81403" } )'
+          - query: 'db.biosamples.find( { "biocharacteristics.class.id" : "icdom:81403" } )'
             description: |
-              The query will return all biosamples with an (exact) class.id of "pgx:icdom:81403" in their "biocharacteristics" object list.
+              The query will return all biosamples with an (exact) class.id of "icdom:81403" in their "biocharacteristics" object list.
           - query: 'db.biosamples.distinct( { "biocharacteristics.class.id", "biocharacteristics.class.id" : { $regex : /ncit/ } } )'
             description: |
               This call to the distinct funcion will return *all* bioterms ids for samples having some ncit id; to retrive only the ncit ids, this has to be followed by a regex filter (/^ncit/).
-      external_ids:
+      external_references:
         description: list of reference_class objects with properly (e.g. identifiers.org) prefixed external identifiers and a term describing the relationship
         type: array
         items:
@@ -90,7 +90,7 @@ definitions:
           - id : "geo:GSM185088"
             relation : "denotes"
         queries:
-          - query: 'db.biosamples.find( { "external_ids.id" : "pubmed:17440070" } )'
+          - query: 'db.biosamples.find( { "external_references.id" : "pubmed:17440070" } )'
             description: the query will return all biosamples reported in this publication
       geo_provenance:
         description: |

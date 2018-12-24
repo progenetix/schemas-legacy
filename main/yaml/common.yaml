@@ -26,7 +26,7 @@ definitions:
         schema:
           $ref: '#/Ontology_class'
         example:
-          id : "ncit:c8294"
+          id : "ncit:C8294"
           label : "Pancreatic Adenocarcinoma"
       negated:
         description: flag for negating this biocharacteristic_class object; a "false" is assumed as default and does not have to be stated

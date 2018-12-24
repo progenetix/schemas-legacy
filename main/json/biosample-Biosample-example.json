@@ -1,7 +1,7 @@
 {
    "created" : "2017-10-25T07:06:03Z",
    "individual_id" : "ind-cnhl-1293347-004",
-   "external_ids" : [
+   "external_references" : [
       {
          "relation" : "provenance",
          "id" : "cellosaurus:CVCL_0312"
@@ -24,20 +24,20 @@
          "description" : "Pancreatic Adenocarcinoma",
          "class" : {
             "label" : "Pancreas, NOS",
-            "id" : "pgx:icdot:c25.9"
+            "id" : "icdot:C25.9"
          }
       },
       {
          "description" : "Pancreatic Adenocarcinoma",
          "class" : {
             "label" : "Adenocarcinoma, NOS",
-            "id" : "pgx:icdom:81403"
+            "id" : "icdom:81403"
          }
       },
       {
          "class" : {
             "label" : "Pancreatic Adenocarcinoma",
-            "id" : "ncit:c8294"
+            "id" : "ncit:C8294"
          },
          "description" : "Pancreatic Adenocarcinoma"
       }
