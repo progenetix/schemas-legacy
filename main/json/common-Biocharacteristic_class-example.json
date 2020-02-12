@@ -1,8 +1,0 @@
-{
-   "negated" : "true",
-   "description" : "Invasive ductal breast carcinoma, metastasized",
-   "class" : {
-      "label" : "Pancreatic Adenocarcinoma",
-      "id" : "ncit:C8294"
-   }
-}
