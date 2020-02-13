@@ -1,0 +1,58 @@
+[
+   {
+      "alternate_bases" : [
+         "AC",
+         "ACC"
+      ],
+      "callset_id" : "DIPG_CS_0290",
+      "digest" : "2:203420136:A>AC,ACC",
+      "genotype" : [
+         "2",
+         "1"
+      ],
+      "id" : "5be1840772798347f0ed9e8b",
+      "reference_bases" : "A",
+      "reference_name" : "2",
+      "start" : [
+         "203420136"
+      ]
+   },
+   {
+      "biosample_id" : "fcl-bs-0099615",
+      "callset_id" : "structdb-cs-nhl-0009876",
+      "digest" : "8,14:20867740-21977798,21978106:BND",
+      "end" : [
+         "21977798",
+         "21978106"
+      ],
+      "id" : "structdb-var-123456789",
+      "mate_name" : "14",
+      "reference_bases" : "N",
+      "reference_name" : "8",
+      "start" : [
+         "20867740"
+      ],
+      "variant_type" : "BND"
+   },
+   {
+      "callset_id" : "structdb-cs-nhl-0009876",
+      "digest" : "6:63450000,63550000-63450000,63550000:DEL",
+      "end" : [
+         "63450000",
+         "63550000"
+      ],
+      "id" : "structdb-var-123456790",
+      "info" : {
+         "cnv_length" : "85500000",
+         "cnv_value" : "-0.294"
+      },
+      "reference_bases" : "N",
+      "reference_name" : "6",
+      "start" : [
+         "63450000",
+         "63550000"
+      ],
+      "variant_type" : "DEL"
+   }
+]
+
