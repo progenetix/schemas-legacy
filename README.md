@@ -7,11 +7,11 @@ A graph showing the basic objects and their relationships. The example attribute
   </div>
 </div>
 
-This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org) project.
+This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org/ui/) project.
 
-The primary documents are in the [yaml](./main/yaml/) directory, with JSON versions and examples extracted from them. The "readable" documentation is also created from the YAML files and can be accessed here:
+The primary YAML documents are in the [schemas](./schemas/) directory, with JSON versions and examples extracted from them. The "readable" documentation is also created from the YAML files and can be accessed here:
 
-* `variant`
+* `Variant`
     The `variant` object includes attributes and examples for both structural (DUP, DEL, BRK) and precise genome variants.
 * `Callset`
     The `callset` object is for technoical data and series information (e.g. used platform and analysis metods). It is not strictly needed for querying combined variant + biosample aspects, since in the current implementation the `variant` object contains a reference to the `biosample` it was derived from.
