@@ -1,6 +1,6 @@
 ## schemas
 
-<img src="rsrc/img/ga4gh-object-model.png" />
+<img src="rsrc/img/ga4gh-object-model.png" align="right" />
 
 This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org/ui/) project.
 
