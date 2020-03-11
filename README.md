@@ -1,4 +1,4 @@
-!(GA4GH legacy schema)[rsrc/img/ga4gh-object-model.png]
+!(GA4GH legacy schema)[https://github.com/progenetix/schemas/blob/master/rsrc/img/ga4gh-object-model.png?raw=true]
 
 ## schemas
 
