@@ -1,4 +1,4 @@
-!(GA4GH legacy schema)["rsrc/img/ga4gh-object-model.png"]
+!(GA4GH legacy schema)[rsrc/img/ga4gh-object-model.png]
 
 ## schemas
 
