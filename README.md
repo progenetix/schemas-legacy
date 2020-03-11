@@ -1,6 +1,6 @@
-!(GA4GH legacy schema)[https://github.com/progenetix/schemas/blob/master/rsrc/img/ga4gh-object-model.png?raw=true]
-
 ## schemas
+
+!(GA4GH legacy schema)[https://github.com/progenetix/schemas/blob/master/rsrc/img/ga4gh-object-model.png?raw=true]
 
 This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org/ui/) project.
 
