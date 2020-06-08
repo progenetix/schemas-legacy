@@ -29,7 +29,7 @@ properties:
     type: string
     examples:
       - 'SAMN05324082'
-  individualId:
+  individual_id:
     description: |
       In a complete data model "individual_id" points to the "id" of the
       individual ("donor", "subjerct"...) this _Biosample_ was derived from.
