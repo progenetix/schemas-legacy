@@ -4,7 +4,7 @@
 
 This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org/ui/) project.
 
-The primary YAML documents are in the [schemas](./schemas/) directory, with JSON versions and examples extracted from them. The "readable" documentation is also created from the YAML files and can be accessed here:
+The primary YAML documents are in the [schemas](./schemas/) directory:
 
 * `Variant`
     The `variant` object includes attributes and examples for both structural (DUP, DEL, BRK) and precise genome variants.
@@ -15,6 +15,7 @@ The primary YAML documents are in the [schemas](./schemas/) directory, with JSON
 * `Individual`
     The `individual` object contains information which pertains to the whole biological entity biosamples are derived from (e.g. sex, heritable phenotypes...).
     
+Other schemas in the repository are components of those main schemas.
 
     
     
