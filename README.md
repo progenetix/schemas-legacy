@@ -4,7 +4,9 @@
 
 This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org/ui/) project.
 
-The primary YAML documents are in the [schemas](./schemas/) directory:
+The files here represent stable/recent versions of schemas used in  [**bycon**](https://github.com/progenetix/bycon/), a project which provides server and middleware for a Beacon solution on top of a set of MongoDB databases.
+
+The primary YAML documents here are in the [schemas](./schemas/) directory:
 
 * `Variant`
     The `variant` object includes attributes and examples for both structural (DUP, DEL, BRK) and precise genome variants.
