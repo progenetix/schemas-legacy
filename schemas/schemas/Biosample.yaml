@@ -1,0 +1,52 @@
+"$schema": http://json-schema.org/draft-07/schema#
+"$id": https://progenetix.org/schemas/Biosample/v2020-12-08
+title: Biosample
+properties:
+  id:
+    type: string
+    examples:
+      - pgxbs-kftvjtgm
+  individualId:
+    type: string
+    examples:
+      - pgxind-kftx5ruq
+  description:
+    type: string
+    examples:
+      - breast carcinoma
+      - adenocarcinoma [cell line HeLa]
+  biocharacteristics:
+    type: array
+    items:
+      "$ref": "#/Characteristic"
+    examples:
+      - type:
+          id: NCIT:C4029
+          label: Cervical Adenocarcinoma
+        type:
+          id: UBERON:0000002
+          label: uterine cervix
+  externalReferences:
+    type: array
+    items:
+      "$ref": "#/Characteristic"
+    examples:
+      - type:
+          id: PMID:9892199
+  individualAgeAtCollection:
+    "$ref": "#/Age"
+  provenance:
+    "$ref": "#/Provenance"
+  dataUseConditions:
+    "$ref": "#/OntologyTerm"
+  sampledTissue:
+    "$ref": "#/OntologyTerm"
+  histologicalDiagnosis:
+    "$ref": "#/OntologyTerm"
+  info:
+    type: object
+  updated:
+    type: string
+    format: date-time
+    examples:
+      - "2020-09-10T17:44:10.170Z"
