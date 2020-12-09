@@ -2,7 +2,7 @@
 
 ## schemas
 
-This repository contains the data schemas for the Progenetix databases (i.e. the backends behind [progenetix.org](http://progenetix.org). [arraymap.org](http://arraymap.org)) and the [Beacon+](http://beacon.progenetix.org/ui/) project.
+This repository contains the data schemas for the Progenetix databases (i.e. the backend behind [progenetix.org](http://progenetix.org)) and the [Beacon+](http://beacon.progenetix.org/ui/) project.
 
 The files here represent stable/recent versions of schemas used in  [**bycon**](https://github.com/progenetix/bycon/), a project which provides server and middleware for a Beacon solution on top of a set of MongoDB databases.
 
