@@ -6,6 +6,8 @@ This repository contains the data schemas for the Progenetix databases (i.e. the
 
 The files here represent stable/recent versions of schemas used in  [**bycon**](https://github.com/progenetix/bycon/), a project which provides server and middleware for a Beacon solution on top of a set of MongoDB databases.
 
+The main schemas have been developed as part of the [GA4GH Metadata Schemas](https://github.com/ga4gh-metadata/metadata-schemas/tree/master/schemas) which had also served for the development of the [Phenopackets](https://github.com/phenopackets/phenopacket-schema/). Current Progenetix schemas closely track and align with Phenopackets and the Beacon v2 API.
+
 The primary YAML documents here are in the [schemas](./schemas/) directory:
 
 * `Variant`
@@ -17,7 +19,7 @@ The primary YAML documents here are in the [schemas](./schemas/) directory:
 * `Individual`
     The `individual` object contains information which pertains to the whole biological entity biosamples are derived from (e.g. sex, heritable phenotypes...).
     
-Other schemas in the repository are components of those main schemas.
+Other schemas in the repository are components of those main schemas or are part of the Progenetix resource environment.
 
     
     
