@@ -1,4 +1,4 @@
-"$schema": http://json-schema.org/draft-07/schema#
+"$schema": https://json-schema.org/draft/2020-12/schema
 "$id": https://progenetix.org/services/schemas/GeojsonPoint/v2020-12-08
 title: GeojsonPoint
 properties:
@@ -7,6 +7,6 @@ properties:
     value: "Point"
   coordinates:
     type: array
-    values:
+    items:
       type: number
       format: float
