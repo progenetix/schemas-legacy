@@ -26,7 +26,7 @@ properties:
   biocharacteristics:
     type: array
     items:
-      "$ref": OntologyTerm.yaml#/properties
+      "$ref": OntologyClass.yaml#/properties
     examples:
       - - id: NCIT:C4029
           label: Cervical Adenocarcinoma
@@ -35,7 +35,7 @@ properties:
   externalReferences:
     type: array
     items:
-      "$ref": OntologyTerm.yaml#/properties
+      "$ref": OntologyClass.yaml#/properties
     examples:
       - - id: PMID:9892199
   individualAgeAtCollection:
@@ -43,11 +43,11 @@ properties:
   provenance:
     "$ref": Provenance.yaml#/properties
   dataUseConditions:
-    "$ref": OntologyTerm.yaml#/properties
+    "$ref": OntologyClass.yaml#/properties
   sampledTissue:
-    "$ref": OntologyTerm.yaml#/properties
+    "$ref": OntologyClass.yaml#/properties
   histologicalDiagnosis:
-    "$ref": OntologyTerm.yaml#/properties
+    "$ref": OntologyClass.yaml#/properties
   info:
     type: object
   updated:
