@@ -9,8 +9,10 @@ properties:
     value: "Point"
   coordinates:
     description: >
-      An array of 2 (longitude, latitude) values.
+      An array of 2 (longitude, latitude) or 3 (longitude, latitude, altitude) values.
     type: array
     items:
       type: number
       format: float
+    minItems: 2
+    maxItems: 3
