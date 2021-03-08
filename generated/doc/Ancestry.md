@@ -33,7 +33,6 @@
     <td>
       <ul>
 <li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
-<li><a href="https://orcid.org/0000-0002-8255-4722">Qingyao Huang</a></li>
       </ul>
     </td>
   </tr>
@@ -51,5 +50,50 @@
 <div id="schema-attributes-title">
   <h3>Attributes</h3>
 </div>
+
+  
+__Type:__ object
+### Properties
+
+<table id="schema-properties-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <th>ancestry</th>
+    <td>OntologyClass.yaml#/properties [<a href="./OntologyClass.html">HTML</a>]</td>
+  </tr>
+  <tr>
+    <th>confidenceScore</th>
+    <td>number (float)</td>
+  </tr>
+  <tr>
+    <th>description</th>
+    <td>string</td>
+  </tr>
+
+</table>
+
+
+#### ancestry
+
+* type: OntologyClass.yaml#/properties [<a href="./OntologyClass.html">HTML</a>]
+
+
+
+
+#### confidenceScore
+
+* type: number (float)
+
+
+
+
+#### description
+
+* type: string
+
+
 
 

@@ -33,7 +33,10 @@
     <th>Contributors</th>
     <td>
       <ul>
-<li><a href="http://beacon-project.io">ELIXIR Beacon project team</a></li>
+<li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
+<li><a href="https://github.com/jrambla">Jordi Rambla</a></li>
+<li><a href="https://github.com/sdelatorrep">Sabele de la Torre</a></li>
+<li><a href="https://github.com/mamanambiya">Mamana Mbiyavanga</a></li>
 <li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
       </ul>
     </td>
@@ -56,15 +59,4 @@
   
 __Type:__ object  
 __Description:__ Default schema for describing Beacon info.
-
-### Properties
-
-<table id="schema-properties-table">
-  <tr>
-    <th>Property</th>
-    <th>Type</th>
-  </tr>
-
-</table>
-
 

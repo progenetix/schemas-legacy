@@ -33,7 +33,10 @@
     <th>Contributors</th>
     <td>
       <ul>
-<li><a href="http://beacon-project.io">ELIXIR Beacon project team</a></li>
+<li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
+<li><a href="https://github.com/jrambla">Jordi Rambla</a></li>
+<li><a href="https://github.com/sdelatorrep">Sabele de la Torre</a></li>
+<li><a href="https://github.com/mamanambiya">Mamana Mbiyavanga</a></li>
 <li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
       </ul>
     </td>
@@ -66,11 +69,11 @@ __Description:__ Search for a genomic region
   </tr>
   <tr>
     <th>meta</th>
-    <td>BeaconRequestMeta.yaml#/properties</td>
+    <td>BeaconRequestMeta.yaml#/properties [<a href="./BeaconRequestMeta.html">HTML</a>]</td>
   </tr>
   <tr>
     <th>query</th>
-    <td>BeaconRequestQuery.yaml#/properties</td>
+    <td>BeaconRequestQuery.yaml#/properties [<a href="./BeaconRequestQuery.html">HTML</a>]</td>
   </tr>
 
 </table>
@@ -78,14 +81,14 @@ __Description:__ Search for a genomic region
 
 #### meta
 
-* type: BeaconRequestMeta.yaml#/properties
+* type: BeaconRequestMeta.yaml#/properties [<a href="./BeaconRequestMeta.html">HTML</a>]
 
 
 
 
 #### query
 
-* type: BeaconRequestQuery.yaml#/properties
+* type: BeaconRequestQuery.yaml#/properties [<a href="./BeaconRequestQuery.html">HTML</a>]
 
 
 

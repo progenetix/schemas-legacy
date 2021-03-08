@@ -7,7 +7,19 @@
       "contributors" : [
          {
             "description" : "ELIXIR Beacon project team",
-            "id" : "http://beacon-project.io"
+            "id" : "https://beacon-project.io/categories/people.html"
+         },
+         {
+            "description" : "Jordi Rambla",
+            "id" : "github:@jrambla"
+         },
+         {
+            "description" : "Sabele de la Torre",
+            "id" : "github:@sdelatorrep"
+         },
+         {
+            "description" : "Mamana Mbiyavanga",
+            "id" : "github:@mamanambiya"
          },
          {
             "description" : "Michael Baudis",

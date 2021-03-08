@@ -6,15 +6,14 @@
 <table id="schema-header-table">
   <tr>
     <th>{S}[B] Status <a href="https://schemablocks.org/about/sb-status-levels.html">[i]</a></th>
-    <td><div id="schema-header-status">proposed</div></td>
+    <td><div id="schema-header-status">community</div></td>
   </tr>
 
   <tr>
     <th>Provenance</th>
     <td>
       <ul>
-<li><a href="https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60">Developer branch of original GA4GH schema</a></li>
-<li><a href="https://github.com/progenetix/schemas/">Progenetix</a></li>
+<li><a href="https://github.com/progenetix/bycon/">Progenetix `bycon` project</a></li>
       </ul>
     </td>
   </tr>
@@ -33,10 +32,7 @@
     <th>Contributors</th>
     <td>
       <ul>
-<li>GA4GH Metadata Task Team</li>
 <li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
-<li><a href="https://orcid.org/0000-0002-4839-5158">Isuru Liyanage</a></li>
-<li><a href="https://orcid.org/0000-0002-9551-6370">Melanie Courtot</a></li>
       </ul>
     </td>
   </tr>
@@ -57,4 +53,40 @@
 
   
 __Description:__ The geographic point object uses the default units from the [DCMI point scheme](http://dublincore.org/documents/dcmi-point/) and avoids optional representation in non-standard units.
+
+### Properties
+
+<table id="schema-properties-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <th>coordinates</th>
+    <td>array of "number"</td>
+  </tr>
+  <tr>
+    <th>type</th>
+    <td>string</td>
+  </tr>
+
+</table>
+
+
+#### coordinates
+
+* type: array of "number"
+
+An array of 2 (longitude, latitude) or 3 (longitude, latitude, altitude) values.
+
+
+
+#### type
+
+* type: string
+* value: Point  
+
+
+
+
 

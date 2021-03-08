@@ -52,3 +52,25 @@
 </div>
 
 
+### Properties
+
+<table id="schema-properties-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <th>codeGroup</th>
+    <td>array of "OntologyClass.yaml#/properties [<a href="./OntologyClass.html">HTML</a>]"</td>
+  </tr>
+
+</table>
+
+
+#### codeGroup
+
+* type: array of "OntologyClass.yaml#/properties [<a href="./OntologyClass.html">HTML</a>]"
+
+
+
+

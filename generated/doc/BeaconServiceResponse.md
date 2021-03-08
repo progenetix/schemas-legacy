@@ -33,7 +33,10 @@
     <th>Contributors</th>
     <td>
       <ul>
-<li><a href="http://beacon-project.io">ELIXIR Beacon project team</a></li>
+<li><a href="https://beacon-project.io/categories/people.html">ELIXIR Beacon project team</a></li>
+<li><a href="https://github.com/jrambla">Jordi Rambla</a></li>
+<li><a href="https://github.com/sdelatorrep">Sabele de la Torre</a></li>
+<li><a href="https://github.com/mamanambiya">Mamana Mbiyavanga</a></li>
 <li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
       </ul>
     </td>
@@ -55,4 +58,37 @@
 
   
 __Description:__ This schema represents the wrapper for Progenetx service responses.
+
+### Properties
+
+<table id="schema-properties-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <th>meta</th>
+    <td>BeaconResponseMeta.yaml#/properties [<a href="./BeaconResponseMeta.html">HTML</a>]</td>
+  </tr>
+  <tr>
+    <th>response</th>
+    <td>BeaconServiceResponseResults.yaml#/properties [<a href="./BeaconServiceResponseResults.html">HTML</a>]</td>
+  </tr>
+
+</table>
+
+
+#### meta
+
+* type: BeaconResponseMeta.yaml#/properties [<a href="./BeaconResponseMeta.html">HTML</a>]
+
+
+
+
+#### response
+
+* type: BeaconServiceResponseResults.yaml#/properties [<a href="./BeaconServiceResponseResults.html">HTML</a>]
+
+
+
 

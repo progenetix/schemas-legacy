@@ -13,7 +13,6 @@
     <th>Provenance</th>
     <td>
       <ul>
-<li><a href="https://github.com/phenopackets/phenopacket-schema/blob/master/docs/age.rst#agerange">Phenopackets</a></li>
 <li><a href="https://github.com/progenetix/bycon/">Progenetix `bycon` project</a></li>
       </ul>
     </td>
@@ -33,8 +32,6 @@
     <th>Contributors</th>
     <td>
       <ul>
-<li><a href="https://orcid.org/0000-0002-3265-15918">Jules Jacobsen</a></li>
-<li><a href="https://orcid.org/0000-0002-0736-91998">Peter Robinson</a></li>
 <li><a href="https://orcid.org/0000-0002-9903-4248">Michael Baudis</a></li>
       </ul>
     </td>
@@ -53,5 +50,39 @@
 <div id="schema-attributes-title">
   <h3>Attributes</h3>
 </div>
+
+  
+__Type:__ object
+### Properties
+
+<table id="schema-properties-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <th>end</th>
+    <td>Age.yaml#/properties/age [<a href="./Age.html">HTML</a>]</td>
+  </tr>
+  <tr>
+    <th>start</th>
+    <td>Age.yaml#/properties/age [<a href="./Age.html">HTML</a>]</td>
+  </tr>
+
+</table>
+
+
+#### end
+
+* type: Age.yaml#/properties/age [<a href="./Age.html">HTML</a>]
+
+
+
+
+#### start
+
+* type: Age.yaml#/properties/age [<a href="./Age.html">HTML</a>]
+
+
 
 
