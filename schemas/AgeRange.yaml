@@ -20,6 +20,6 @@ meta:
   sb_status: community
 properties:
   start:
-    "$ref": Age.yaml#/properties
+    "$ref": Age.yaml#/properties/age
   end:
-    "$ref": Age.yaml#/properties
+    "$ref": Age.yaml#/properties/age

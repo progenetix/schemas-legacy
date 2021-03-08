@@ -13,7 +13,7 @@
     <th>Provenance</th>
     <td>
       <ul>
-<li><a href="https://github.com/ga4gh-metadata/metadata-schemas/blob/master/schemas/shared.proto#L60">Developer branch of original GA4GH schema</a></li>
+<li><a href="https://github.com/ga4gh/ga4gh-schemas/blob/master/src/main/proto/ga4gh/variants.proto#L65">GA4GH schemas</a></li>
 <li><a href="https://github.com/progenetix/bycon/">Progenetix `bycon` project</a></li>
       </ul>
     </td>
