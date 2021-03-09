@@ -60,3 +60,14 @@
 __Type:__ object  
 __Description:__ Alternative schema for describing this Beacon object.
 
+### Properties
+
+<table id="schema-properties-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+  </tr>
+
+</table>
+
+
