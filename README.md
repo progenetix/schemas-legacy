@@ -1,3 +1,7 @@
+# Progenetix Schemas
+
+**Schemas for Progenetix can now be found inside the [`bycon`](http://github.com/progenetix/bycon) project with additional info on the [Progenetix documentation site](http://docs.progenetix.org).**
+
 <img src="rsrc/img/ga4gh-object-model.png" align="right" />
 
 ## schemas
